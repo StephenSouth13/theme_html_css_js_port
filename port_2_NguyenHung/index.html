@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Nguyễn Hưng — Marketing Strategist. Giúp thương hiệu tăng trưởng bền vững thông qua chiến lược marketing hiệu quả & sáng tạo."/>
+  <title>Nguyễn Hưng | Marketing Strategist</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Preconnect fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+</head>
+<body>
+
+  <!-- =========== HEADER =========== -->
+  <header id="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#hero" class="header-logo">
+          <div class="logo-icon">NH</div>
+          Nguyễn Hưng
+        </a>
+        <nav class="header-nav">
+          <a href="#hero" class="active">Trang chủ</a>
+          <a href="#about">Giới thiệu</a>
+          <a href="#projects">Dự án</a>
+          <a href="#skills">Kỹ năng</a>
+          <a href="#blog">Blog</a>
+          <a href="#cta">Liên hệ</a>
+        </nav>
+        <div class="header-actions">
+          <button class="btn-cv">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Tải CV
+          </button>
+          <button class="btn-theme" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        </div>
+        <div class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#hero">Trang chủ</a>
+    <a href="#about">Giới thiệu</a>
+    <a href="#projects">Dự án</a>
+    <a href="#skills">Kỹ năng</a>
+    <a href="#blog">Blog</a>
+    <a href="#cta">Liên hệ</a>
+  </nav>
+
+  <!-- =========== HERO =========== -->
+  <section id="hero">
+    <div class="hero-stars"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content fade-up">
+          <div class="hero-label">Marketing Strategist</div>
+          <h1 class="hero-title">
+            Nguyễn<br><span>Hưng</span>
+          </h1>
+          <p class="hero-desc">
+            Tôi giúp thương hiệu tăng trưởng bền vững thông qua chiến lược marketing hiệu quả &amp; sáng tạo.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              Xem dự án của tôi
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#cta" class="btn btn-outline">
+              Liên hệ hợp tác
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </a>
+          </div>
+          <div class="hero-social">
+            <span>Kết nối với tôi:</span>
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="mailto:nguyenhung.marketing@gmail.com" class="social-icon" aria-label="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-up" style="animation-delay:0.2s">
+          <div class="hero-image-wrap">
+            <div class="hero-img-bg"></div>
+            <img class="hero-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Nguyễn Hưng"/>
+            <div class="hero-card card-roi">
+              <div class="hero-card-label">ROI trung bình</div>
+              <div class="hero-card-value">312% <span class="hero-card-badge">+38%</span></div>
+              <svg width="80" height="28" viewBox="0 0 80 28" fill="none" style="margin-top:6px">
+                <path d="M0 24 L20 18 L40 12 L60 6 L80 2" stroke="#7c5cfc" stroke-width="2" fill="none"/>
+                <path d="M0 24 L20 18 L40 12 L60 6 L80 2 L80 28 L0 28Z" fill="rgba(124,92,252,0.12)"/>
+              </svg>
+            </div>
+            <div class="hero-card card-projects">
+              <div class="hero-card-label">Chiến dịch đã triển khai</div>
+              <div class="hero-card-value">58+</div>
+              <div style="font-size:11px;color:var(--text-muted);margin-top:2px">Dự án thành công</div>
+            </div>
+            <div class="hero-card card-budget">
+              <div class="hero-card-label">Ngân sách quản lý</div>
+              <div class="hero-card-value">20B+ <span style="font-size:13px;color:var(--text-muted);font-weight:500">VNĐ</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="mouse"></div>
+      <span>Cuộn xuống</span>
+    </div>
+  </section>
+
+  <!-- =========== ABOUT + STATS =========== -->
+  <section id="about" class="section" style="background:var(--bg-secondary);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div class="container">
+      <div class="about-inner">
+        <div class="fade-up">
+          <div class="section-label">Về tôi</div>
+          <h2 class="section-title">
+            Đam mê marketing.<br>
+            Dữ liệu dẫn lối. <span>Kết quả là tất cả.</span>
+          </h2>
+          <p class="about-desc">
+            Với hơn 5 năm kinh nghiệm trong lĩnh vực marketing, tôi đã đồng hành cùng nhiều doanh nghiệp từ startup đến thương hiệu lớn để xây dựng chiến lược, triển khai chiến dịch và tối ưu hiệu quả tăng trưởng.
+          </p>
+          <a href="#" class="btn btn-outline" style="font-size:13px;padding:10px 20px;">
+            Xem thêm về tôi
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+        <div class="about-cards fade-up" style="animation-delay:0.15s">
+          <div class="about-card">
+            <div class="about-card-icon">🎯</div>
+            <h4>Chiến lược</h4>
+            <p>Xây dựng chiến lược marketing bài bản, dựa trên dữ liệu &amp; insight.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">💡</div>
+            <h4>Sáng tạo</h4>
+            <p>Ý tưởng sáng tạo, nội dung khác biệt giúp thương hiệu nổi bật.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">📈</div>
+            <h4>Hiệu quả</h4>
+            <p>Tối ưu ngân sách quảng cáo, tối đa hiệu quả và ROI cho doanh nghiệp.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🤝</div>
+            <h4>Đồng hành</h4>
+            <p>Đồng hành cùng doanh nghiệp trong hành trình tăng trưởng dài hạn.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat-item fade-up">
+          <div style="display:flex;align-items:baseline;justify-content:center;gap:2px">
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-number" style="font-size:22px">+</span>
+          </div>
+          <div class="stat-label">Năm kinh nghiệm</div>
+        </div>
+        <div class="stat-item fade-up" style="animation-delay:0.1s">
+          <div style="display:flex;align-items:baseline;justify-content:center;gap:2px">
+            <span class="stat-number" data-target="58">0</span>
+            <span class="stat-number" style="font-size:22px">+</span>
+          </div>
+          <div class="stat-label">Dự án thành công</div>
+        </div>
+        <div class="stat-item fade-up" style="animation-delay:0.15s">
+          <div style="display:flex;align-items:baseline;justify-content:center;gap:2px">
+            <span class="stat-number" data-target="30">0</span>
+            <span class="stat-number" style="font-size:22px">+</span>
+          </div>
+          <div class="stat-label">Khách hàng hài lòng</div>
+        </div>
+        <div class="stat-item fade-up" style="animation-delay:0.2s">
+          <div style="display:flex;align-items:baseline;justify-content:center;gap:2px">
+            <span class="stat-number" data-target="312">0</span>
+            <span class="stat-number" style="font-size:22px">%</span>
+          </div>
+          <div class="stat-label">ROI trung bình</div>
+        </div>
+        <div class="stat-item fade-up" style="animation-delay:0.25s">
+          <div style="display:flex;align-items:baseline;justify-content:center;gap:2px">
+            <span class="stat-number" data-target="20">0</span>
+            <span class="stat-number" style="font-size:22px">B+</span>
+          </div>
+          <div class="stat-label">Ngân sách quản lý</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========== PROJECTS =========== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="projects-header fade-up">
+        <div>
+          <div class="section-label">Dự án tiêu biểu</div>
+          <h2 class="section-title">Chiến lược đúng đắn.<br><span>Kết quả ấn tượng.</span></h2>
+        </div>
+        <a href="#" class="btn btn-outline" style="font-size:13px;padding:10px 20px;flex-shrink:0">
+          Xem tất cả dự án
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card fade-up">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&q=80" alt="Cocoon"/>
+            <span class="project-tag tag">Beauty</span>
+          </div>
+          <div class="project-body">
+            <div class="project-logo"><span style="font-size:16px;font-weight:900;letter-spacing:0.05em;">COCOON</span></div>
+            <div class="project-title">Chiến dịch Digital 360°</div>
+            <p class="project-desc">Tăng nhận diện thương hiệu và doanh thu 2.5 lần chỉ sau 3 tháng triển khai chiến dịch toàn diện.</p>
+            <div class="project-metric">
+              <div>
+                <div class="project-metric-value">+250%</div>
+                <div class="project-metric-label">Doanh thu</div>
+              </div>
+              <span class="project-metric-badge">↑ Tăng trưởng</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card fade-up" style="animation-delay:0.1s">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500&q=80" alt="Tiki"/>
+            <span class="project-tag tag">E-commerce</span>
+          </div>
+          <div class="project-body">
+            <div class="project-logo"><span style="font-size:16px;font-weight:900;color:#1a94ff;">Tiki</span></div>
+            <div class="project-title">Tối ưu hiệu quả quảng cáo</div>
+            <p class="project-desc">Xây dựng chiến lược ngân sách quảng cáo, cắt giảm 30% CPA và tăng 43% tỉ lệ chuyển đổi.</p>
+            <div class="project-metric">
+              <div>
+                <div class="project-metric-value" style="color:#ef4444">-30%</div>
+                <div class="project-metric-label">CPA</div>
+              </div>
+              <span class="project-metric-badge neg">↓ Chi phí</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card fade-up" style="animation-delay:0.2s">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1580481072645-022349e99541?w=500&q=80" alt="Vietcoco"/>
+            <span class="project-tag tag">FMCG</span>
+          </div>
+          <div class="project-body">
+            <div class="project-logo"><span style="font-size:16px;font-weight:900;">Vietcoco</span></div>
+            <div class="project-title">Ra mắt sản phẩm mới</div>
+            <p class="project-desc">Xây dựng chiến lược Go-to-Market thành công, đạt 1M+ sản phẩm bán ra trong 2 tháng.</p>
+            <div class="project-metric">
+              <div>
+                <div class="project-metric-value">1M+</div>
+                <div class="project-metric-label">Sản phẩm bán ra</div>
+              </div>
+              <span class="project-metric-badge">↑ Launch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots fade-up">
+        <div class="carousel-dot active"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== SKILLS =========== -->
+  <section id="skills" class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div class="fade-up">
+        <div class="section-label">Kỹ năng chuyên môn</div>
+        <h2 class="section-title">Tư duy chiến lược.<br>Thực thi <span>xuất sắc.</span></h2>
+      </div>
+      <div class="skills-tabs fade-up" style="animation-delay:0.15s">
+        <div class="skill-tab active"><span class="skill-icon">🎯</span>Chiến lược Marketing</div>
+        <div class="skill-tab"><span class="skill-icon">📱</span>Digital Marketing</div>
+        <div class="skill-tab"><span class="skill-icon">⚡</span>Performance Ads</div>
+        <div class="skill-tab"><span class="skill-icon">✍️</span>Content Marketing</div>
+        <div class="skill-tab"><span class="skill-icon">📊</span>Analytics &amp; Data</div>
+        <div class="skill-tab"><span class="skill-icon">🔄</span>CRM &amp; Automation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== TESTIMONIALS =========== -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="fade-up">
+        <div class="section-label">Khách hàng nói gì</div>
+        <h2 class="section-title">Niềm tin tạo nên <span>giá trị.</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">Nguyễn Hưng là một marketer chiến lược, nhiệt huyết và luôn đạt kết quả lên hàng đầu. Kết quả vượt ngoài mong đợi!</p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&q=80" alt="Trần Anh Khoa"/>
+            <div>
+              <div class="author-name">Trần Anh Khoa</div>
+              <div class="author-role">CEO · Tiki</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up" style="animation-delay:0.1s">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">Hưng có khả năng phân tích dữ liệu tuyệt vời và đưa ra chiến lược rất sát với mục tiêu kinh doanh. Một đối tác đáng tin cậy!</p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80&q=80" alt="Nguyễn Ngọc Anh"/>
+            <div>
+              <div class="author-name">Nguyễn Ngọc Anh</div>
+              <div class="author-role">Marketing Director · Cocoon</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up" style="animation-delay:0.2s">
+          <div class="quote-mark">"</div>
+          <p class="testimonial-text">Sáng tạo, chủ động và luôn tìm ra cách làm mới để thương hiệu bứt phá. Rất recommend!</p>
+          <div class="testimonial-author">
+            <img class="author-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=80" alt="Lê Minh Hải"/>
+            <div>
+              <div class="author-name">Lê Minh Hải</div>
+              <div class="author-role">Brand Manager · Vietcoco</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-dots fade-up" style="margin-top:24px">
+        <div class="carousel-dot active"></div>
+        <div class="carousel-dot"></div>
+        <div class="carousel-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== BLOG =========== -->
+  <section id="blog" class="section" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div class="blog-header fade-up">
+        <div>
+          <div class="section-label">Blog &amp; Insights</div>
+          <h2 class="section-title">Chia sẻ kiến thức.<br>Cập nhật <span>xu hướng.</span></h2>
+        </div>
+        <a href="#" class="btn btn-outline" style="font-size:13px;padding:10px 20px;flex-shrink:0">
+          Xem tất cả bài viết
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card fade-up">
+          <div class="blog-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80" alt="Blog 1"/></div>
+          <div class="blog-body">
+            <div class="blog-date">10/05/2024</div>
+            <div class="blog-title">5 xu hướng Marketing 2024 doanh nghiệp không thể bỏ qua</div>
+          </div>
+        </div>
+        <div class="blog-card fade-up" style="animation-delay:0.1s">
+          <div class="blog-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=80" alt="Blog 2"/></div>
+          <div class="blog-body">
+            <div class="blog-date">02/05/2024</div>
+            <div class="blog-title">Cách tối ưu ngân sách quảng cáo hiệu quả trong 2024</div>
+          </div>
+        </div>
+        <div class="blog-card fade-up" style="animation-delay:0.15s">
+          <div class="blog-image"><img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=400&q=80" alt="Blog 3"/></div>
+          <div class="blog-body">
+            <div class="blog-date">18/04/2024</div>
+            <div class="blog-title">Content Marketing: Làm sao để tạo nội dung chạm đến khách hàng?</div>
+          </div>
+        </div>
+        <div class="blog-card fade-up" style="animation-delay:0.2s">
+          <div class="blog-image"><img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=400&q=80" alt="Blog 4"/></div>
+          <div class="blog-body">
+            <div class="blog-date">05/04/2024</div>
+            <div class="blog-title">Case study: Tăng trưởng 300% doanh thu chỉ sau 3 tháng</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== CTA =========== -->
+  <section id="cta" style="padding:0 0 80px">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <div class="cta-content">
+          <div class="cta-title">Bạn có dự án cần tư vấn?</div>
+          <div class="cta-title" style="color:var(--accent-light)">Hãy cùng nhau tạo nên kết quả đột phá!</div>
+          <p class="cta-sub" style="margin-top:8px">Tôi luôn sẵn sàng lắng nghe và đồng hành cùng bạn.</p>
+        </div>
+        <div class="cta-action">
+          <a href="mailto:nguyenhung.marketing@gmail.com" class="btn btn-primary" style="font-size:14px;padding:14px 28px;">
+            Liên hệ với tôi
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== FOOTER =========== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid fade-up">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div style="width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:#fff;flex-shrink:0">NH</div>
+            Nguyễn Hưng
+          </div>
+          <p class="footer-desc">Marketing Strategist giúp doanh nghiệp xây dựng chiến lược và đạt tăng trưởng bền vững.</p>
+          <div class="footer-social-links">
+            <a href="#" class="social-icon" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="social-icon" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--bg-primary)"/></svg></a>
+            <a href="mailto:nguyenhung.marketing@gmail.com" class="social-icon" aria-label="Email"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Điều hướng</div>
+          <ul class="footer-links">
+            <li><a href="#hero">Trang chủ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#projects">Dự án</a></li>
+            <li><a href="#skills">Kỹ năng</a></li>
+            <li><a href="#blog">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Dịch vụ</div>
+          <ul class="footer-links">
+            <li><a href="#">Chiến lược Marketing</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">Performance Ads</a></li>
+            <li><a href="#">Content Marketing</a></li>
+            <li><a href="#">Tư vấn &amp; Đào tạo</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Kết nối</div>
+          <ul class="footer-contact">
+            <li>
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              0971 234 567
+            </li>
+            <li>
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              nguyenhung.marketing@gmail.com
+            </li>
+            <li>
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Hà Nội, Việt Nam
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-copy">© 2024 Nguyễn Hưng. All rights reserved.</div>
+        <div class="footer-credit">Designed with <span>♥</span> by Nguyễn Hưng</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Về đầu trang">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,9 +1,39 @@
-<header data-section="header" class="main-header">
-    <div class="logo">Nguyễn Hưng</div>
-    <nav>
+<!-- HEADER COMPONENT -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#hero" class="header-logo">
+        <div class="logo-icon">NH</div>
+        Nguyễn Hưng
+      </a>
+      <nav class="header-nav">
+        <a href="#hero" class="active">Trang chủ</a>
         <a href="#about">Giới thiệu</a>
         <a href="#projects">Dự án</a>
-        <a href="#contact">Liên hệ</a>
-    </nav>
-    <button class="btn-primary">Tải CV</button>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#blog">Blog</a>
+        <a href="#cta">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-cv" onclick="window.open('#','_blank')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Tải CV
+        </button>
+        <button class="btn-theme" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </div>
+      <div class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
 </header>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#hero">Trang chủ</a>
+  <a href="#about">Giới thiệu</a>
+  <a href="#projects">Dự án</a>
+  <a href="#skills">Kỹ năng</a>
+  <a href="#blog">Blog</a>
+  <a href="#cta">Liên hệ</a>
+</nav>
