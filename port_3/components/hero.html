@@ -1,41 +1,121 @@
-<section id="hero" class="hero">
+<!-- ============================================================
+     HERO SECTION — hero.html
+     ============================================================ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
 
-  <div class="hero-bg"></div>
+      <!-- LEFT: Text content -->
+      <div class="hero-content fade-up">
 
-  <div class="container hero-grid">
+        <div class="hero-eyebrow">Sinh viên đa năng</div>
 
-    <div class="hero-text">
-      <span class="badge">Marketing Student • Video Creator</span>
+        <h1 class="hero-name">Quách Thành Long</h1>
 
-      <h1>
-        Quách Thành Long<br/>
-        <span class="gradient">Business & Short Video Growth</span>
-      </h1>
+        <div class="hero-tagline script">
+          Business Creator &amp; Video Storyteller ♡
+        </div>
 
-      <p>
-        Tôi tạo nội dung viral + chiến lược marketing giúp thương hiệu tăng trưởng nhanh bằng short video.
-      </p>
+        <p class="hero-desc">
+          Kinh doanh nhạy bén, sáng tạo nội dung đỉnh cao.<br>
+          Biến ý tưởng thành giá trị, con số và dấu ấn.
+        </p>
 
-      <div class="hero-actions">
-        <button class="btn-primary">View Projects</button>
-        <button class="btn-outline">Contact Me</button>
+        <!-- Inline stats -->
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <span class="hero-stat-val">2.5B+</span>
+            <div class="hero-stat-label">Doanh thu dự án</div>
+          </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-val">120+</span>
+            <div class="hero-stat-label">Short video đã sản xuất</div>
+          </div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-val">23.7%</span>
+            <div class="hero-stat-label">Tỷ lệ chuyển đổi</div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">
+            Xem dự án của mình
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#cta-banner" class="btn btn-outline">
+            Liên hệ hợp tác
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </a>
+        </div>
+
+        <!-- Social links -->
+        <div class="hero-social-row">
+          <span>Kết nối với tôi:</span>
+          <a href="#" class="s-icon" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="s-icon" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="s-icon" aria-label="TikTok">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+          <a href="#" class="s-icon" aria-label="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="s-icon" aria-label="Email">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
       </div>
 
-      <div class="hero-metrics">
-        <div>📈 2.5B Reach</div>
-        <div>🎬 120+ Videos</div>
-        <div>⚡ 23.7% Conversion</div>
+      <!-- RIGHT: Visual / Photo -->
+      <div class="hero-visual fade-up" style="animation-delay:0.2s">
+
+        <div class="hero-photo-wrap">
+          <!-- Replace with actual photo -->
+          <img
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80"
+            alt="Quách Thành Long"
+          />
+        </div>
+
+        <!-- Floating card: Revenue -->
+        <div class="hero-float f-revenue">
+          <div class="float-label">Doanh thu dự án</div>
+          <div class="float-val">2.5B+</div>
+          <div class="float-sub">Đạt được trong 6 tháng</div>
+          <div class="float-chart">
+            <svg width="90" height="28" viewBox="0 0 90 28" fill="none">
+              <path d="M0 24 L18 20 L36 14 L54 8 L72 4 L90 1" stroke="#7c3aed" stroke-width="2" fill="none"/>
+              <path d="M0 24 L18 20 L36 14 L54 8 L72 4 L90 1 L90 28 L0 28Z" fill="rgba(124,58,237,0.08)"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Floating card: Short Video -->
+        <div class="hero-float f-video" style="min-width:160px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+            <div>
+              <div class="float-label">Video đã sản xuất</div>
+              <div class="float-val">120+</div>
+              <div class="float-sub">Short video</div>
+            </div>
+            <div class="float-icon-play">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating card: Conversion -->
+        <div class="hero-float f-conv">
+          <div class="float-label">Tỷ lệ chuyển đổi</div>
+          <div class="float-val" style="color:var(--purple)">23.7%</div>
+          <div class="float-sub">Trung bình các chiến dịch</div>
+        </div>
+
       </div>
     </div>
-
-    <div class="hero-visual">
-      <div class="avatar-glow"></div>
-      <div class="avatar"></div>
-
-      <div class="float f1">+ Brand Growth</div>
-      <div class="float f2">+ Viral Content</div>
-      <div class="float f3">+ Conversion Ads</div>
-    </div>
-
   </div>
 </section>

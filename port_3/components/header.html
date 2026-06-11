@@ -1,19 +1,53 @@
-<header class="header glass">
-  <div class="container header-inner">
+<!-- ============================================================
+     HEADER COMPONENT — header.html
+     ============================================================ -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
 
-    <div class="logo">
-      ⚡ Quách Thành Long
+      <!-- LOGO -->
+      <a href="#hero" class="logo">
+        Quách Thành Long
+        <small>quachthanhlong.com</small>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="header-nav">
+        <a href="#hero" class="active">Trang chủ</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#about">Kinh doanh</a>
+        <a href="#projects">Sản xuất Short Video</a>
+        <a href="#projects">Dự án</a>
+        <a href="#tools-skills">Kỹ năng</a>
+        <a href="#blog">Blog</a>
+        <a href="#cta-banner">Liên hệ</a>
+      </nav>
+
+      <!-- ACTIONS -->
+      <div class="header-actions">
+        <a href="#" class="btn-cv-header">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Tải CV
+        </a>
+        <button class="btn-theme-header" id="themeToggle" aria-label="Chế độ tối">🌙</button>
+      </div>
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </div>
+
     </div>
-
-    <nav class="nav">
-      <a href="#hero">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#footer">Contact</a>
-    </nav>
-
-    <button class="btn-primary">Download CV</button>
-
   </div>
 </header>
+
+<!-- MOBILE NAV -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#hero">Trang chủ</a>
+  <a href="#about">Giới thiệu</a>
+  <a href="#about">Kinh doanh</a>
+  <a href="#projects">Sản xuất Short Video</a>
+  <a href="#projects">Dự án</a>
+  <a href="#tools-skills">Kỹ năng</a>
+  <a href="#cta-banner">Liên hệ</a>
+</nav>

@@ -1,17 +1,133 @@
-<section id="projects" class="section">
-
+<!-- ============================================================
+     PROJECTS SECTION — project-carousel.html
+     ============================================================ -->
+<section id="projects" class="section-pad" style="background:var(--bg-soft)">
   <div class="container">
 
-    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-header fade-up">
+      <div>
+        <div class="section-eyebrow">Dự án tiêu biểu</div>
+        <h2 class="section-title">Những dự án tạo nên dấu ấn</h2>
+      </div>
+      <a href="#" class="btn btn-outline" style="font-size:13px;padding:10px 22px;flex-shrink:0;border-radius:50px">
+        Xem tất cả dự án
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
 
-    <div class="grid-3">
+    <div class="projects-slider-wrap">
 
-      <div class="project-card glass"></div>
-      <div class="project-card glass"></div>
-      <div class="project-card glass"></div>
+      <!-- Prev arrow -->
+      <button class="slider-nav prev" aria-label="Trước">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Project 1 -->
+        <div class="proj-card fade-up">
+          <div class="proj-img">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80" alt="Chiến dịch Tết 2024"/>
+            <span class="tag">Sản xuất Video</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-title">Chiến dịch Tết 2024 – Thương hiệu thời trang</div>
+            <p class="proj-desc">Sản xuất 15+ short video, đạt 3M+ lượt xem trên TikTok trong vòng 2 tuần.</p>
+            <div class="proj-metrics">
+              <div>
+                <div class="proj-metric-val">3M+</div>
+                <div class="proj-metric-label">Lượt xem</div>
+              </div>
+              <div>
+                <div class="proj-metric-val">150K+</div>
+                <div class="proj-metric-label">Tương tác</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="proj-card fade-up" style="animation-delay:0.08s">
+          <div class="proj-img">
+            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&q=80" alt="Dự án kinh doanh"/>
+            <span class="tag tag-green">Kinh Doanh</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-title">Dự án kinh doanh mỹ phẩm thiên nhiên</div>
+            <p class="proj-desc">Xây dựng chiến lược &amp; triển khai, doanh thu đạt 1.2 tỷ trong 4 tháng.</p>
+            <div class="proj-metrics">
+              <div>
+                <div class="proj-metric-val">1.2B+</div>
+                <div class="proj-metric-label">Doanh thu</div>
+              </div>
+              <div>
+                <div class="proj-metric-val">200%</div>
+                <div class="proj-metric-label">Tăng trưởng</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="proj-card fade-up" style="animation-delay:0.16s">
+          <div class="proj-img">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&q=80" alt="Series review sản phẩm"/>
+            <span class="tag">Sản xuất Video</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-title">Series review sản phẩm – Thương hiệu X°</div>
+            <p class="proj-desc">Sản xuất 20+ video review, tăng 40% tỉ lệ chuyển đổi cho thương hiệu.</p>
+            <div class="proj-metrics">
+              <div>
+                <div class="proj-metric-val">40%</div>
+                <div class="proj-metric-label">Chuyển đổi</div>
+              </div>
+              <div>
+                <div class="proj-metric-val">500K+</div>
+                <div class="proj-metric-label">Lượt xem</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="proj-card fade-up" style="animation-delay:0.24s">
+          <div class="proj-img">
+            <img src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=400&q=80" alt="Chiến dịch Back to School"/>
+            <span class="tag tag-blue">Digital Marketing</span>
+          </div>
+          <div class="proj-body">
+            <div class="proj-title">Chiến dịch Back to School – Thương hiệu X°</div>
+            <p class="proj-desc">Lên ý tưởng &amp; triển khai chiến dịch đa kênh, tiếp cận 2M+ khách hàng tiềm năng.</p>
+            <div class="proj-metrics">
+              <div>
+                <div class="proj-metric-val">2M+</div>
+                <div class="proj-metric-label">Tiếp cận</div>
+              </div>
+              <div>
+                <div class="proj-metric-val">25%</div>
+                <div class="proj-metric-label">Tăng doanh số</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Next arrow -->
+      <button class="slider-nav next" aria-label="Sau">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
 
     </div>
 
-  </div>
+    <!-- Dots -->
+    <div class="carousel-dots fade-up">
+      <div class="cdot active"></div>
+      <div class="cdot"></div>
+      <div class="cdot"></div>
+      <div class="cdot"></div>
+    </div>
 
+  </div>
 </section>
