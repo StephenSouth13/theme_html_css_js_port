@@ -1,0 +1,223 @@
+<!-- ===================== PROJECTS + CONTACT FORM ===================== -->
+<section id="projects-contact" class="section-pad" style="background:var(--bg-soft)">
+  <div class="container">
+    <div class="pc-inner">
+
+      <!-- LEFT: Projects -->
+      <div>
+        <div class="reveal up">
+          <div class="eyebrow">Dự án nổi bật</div>
+          <h2 class="section-heading" style="margin-bottom:28px">Một số dự án chúng tôi đã thực hiện</h2>
+        </div>
+
+        <div class="projects-grid-inner">
+          <div class="proj-card reveal scale">
+            <div class="proj-img">
+              <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&q=80" alt="CRM Platform"/>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tags">
+                <span class="proj-tag">Next.js</span>
+                <span class="proj-tag">TailwindCSS</span>
+              </div>
+              <div class="proj-title">CRM Platform</div>
+              <a href="#" class="proj-link">
+                Xem dự án
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="proj-card reveal scale" style="transition-delay:0.08s">
+            <div class="proj-img">
+              <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&q=80" alt="Personal Portfolio"/>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tags">
+                <span class="proj-tag">Next.js</span>
+                <span class="proj-tag">Framer Motion</span>
+              </div>
+              <div class="proj-title">Personal Portfolio</div>
+              <a href="#" class="proj-link">
+                Xem dự án
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="proj-card reveal scale" style="transition-delay:0.16s">
+            <div class="proj-img">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80" alt="Real Estate Landing Page"/>
+            </div>
+            <div class="proj-body">
+              <div class="proj-tags">
+                <span class="proj-tag">HTML</span>
+                <span class="proj-tag">CSS</span>
+                <span class="proj-tag">JavaScript</span>
+              </div>
+              <div class="proj-title">Real Estate Landing Page</div>
+              <a href="#" class="proj-link">
+                Xem dự án
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Contact Form -->
+      <div class="reveal right" style="transition-delay:0.1s">
+        <div class="contact-form-box">
+          <div style="display:inline-flex;align-items:center;gap:7px;background:var(--purple-soft);border:1px solid var(--border-purple);padding:5px 12px;border-radius:50px;font-size:11px;font-weight:700;color:var(--purple);margin-bottom:14px;letter-spacing:0.1em;text-transform:uppercase">
+            📋 Nhận báo giá miễn phí
+          </div>
+          <div class="form-title">Chia sẻ nhu cầu của bạn</div>
+          <div class="form-sub">Chúng tôi cam kết bảo mật thông tin của bạn.</div>
+
+          <form id="contactForm" onsubmit="return false">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Họ và tên <span class="req">*</span></label>
+                <input type="text" class="form-input" placeholder="Nguyễn Văn A" required/>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email <span class="req">*</span></label>
+                <input type="email" class="form-input" placeholder="you@email.com" required/>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Số điện thoại</label>
+                <input type="tel" class="form-input" placeholder="0912 345 678"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Loại dịch vụ <span class="req">*</span></label>
+              <select class="form-select form-input">
+                <option value="">Landing Page</option>
+                <option>Portfolio Website</option>
+                <option>Business Website</option>
+                <option>AI Automation</option>
+                <option>Khác</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Mô tả chi tiết nhu cầu của bạn <span class="req">*</span></label>
+              <textarea class="form-textarea" placeholder="Bạn muốn một website như thế nào? Mục tiêu của bạn là gì?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">
+              Gửi yêu cầu tư vấn miễn phí
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </form>
+
+          <div class="form-privacy">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Chúng tôi cam kết bảo mật thông tin của bạn.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section id="pricing" class="section-pad" style="background:#fff">
+  <div class="container">
+    <div style="text-align:center" class="reveal up">
+      <div class="eyebrow">Bảng giá tham khảo</div>
+      <h2 class="section-heading">Chọn gói phù hợp với nhu cầu của bạn</h2>
+    </div>
+
+    <div class="pricing-grid">
+
+      <!-- Starter -->
+      <div class="pricing-card reveal up">
+        <div class="pricing-name">Starter</div>
+        <div class="pricing-tagline">Dành cho cá nhân &amp; dự án nhỏ</div>
+        <div class="pricing-price">3.000.000đ <span>/ dự án</span></div>
+        <div class="pricing-price-note">Giá đã bao gồm thiết kế &amp; lập trình</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Landing Page
+          </li>
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Responsive Design
+          </li>
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            SEO Basic
+          </li>
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Hỗ trợ 7 ngày
+          </li>
+        </ul>
+        <a href="#projects-contact" class="btn btn-outline pricing-btn">Chọn gói</a>
+      </div>
+
+      <!-- Business (Popular) -->
+      <div class="pricing-card featured reveal scale" style="transition-delay:0.1s">
+        <div class="popular-badge">POPULAR</div>
+        <div class="pricing-name">Business</div>
+        <div class="pricing-tagline">Dành cho doanh nghiệp vừa</div>
+        <div class="pricing-price">8.000.000đ <span>/ dự án</span></div>
+        <div class="pricing-price-note">Giá đã bao gồm thiết kế &amp; lập trình</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Multi-page Website
+          </li>
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            CMS quản trị
+          </li>
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            SEO Advanced
+          </li>
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Hỗ trợ 30 ngày
+          </li>
+        </ul>
+        <a href="#projects-contact" class="btn btn-primary pricing-btn">Chọn gói</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="pricing-card reveal up" style="transition-delay:0.2s">
+        <div class="pricing-name">Premium</div>
+        <div class="pricing-tagline">Dành cho doanh nghiệp lớn</div>
+        <div class="pricing-price">15.000.000đ+ <span>/ dự án</span></div>
+        <div class="pricing-price-note">Tùy chỉnh theo yêu cầu</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Custom System
+          </li>
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            AI Automation
+          </li>
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            CRM Integration
+          </li>
+          <li class="pricing-feature">
+            <div class="pf-icon pf-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Hỗ trợ 90 ngày
+          </li>
+        </ul>
+        <a href="#projects-contact" class="btn btn-outline pricing-btn">Liên hệ tư vấn</a>
+      </div>
+
+    </div>
+  </div>
+</section>
