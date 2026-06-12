@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trần Hoàng Minh Thư — Luxury Personal Brand</title>
+  <meta name="description" content="Kiến Tạo Giá Trị, Dẫn Lối Thành Công. Đồng hành cùng các nhà lãnh đạo, doanh nhân và chuyên gia trên hành trình phát triển thương hiệu cá nhân." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="page-loader">
+    <div class="loader-inner">
+      <span class="loader-script">Minh Thư</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- Header -->
+  <div id="header-root"></div>
+  <!-- Hero -->
+  <div id="hero-root"></div>
+  <!-- About -->
+  <div id="about-root"></div>
+  <!-- Philosophy -->
+  <div id="philosophy-root"></div>
+  <!-- Framework -->
+  <div id="framework-root"></div>
+  <!-- Services -->
+  <div id="services-root"></div>
+  <!-- Testimonials -->
+  <div id="testimonials-root"></div>
+  <!-- Insights -->
+  <div id="insights-root"></div>
+  <!-- CTA -->
+  <div id="cta-root"></div>
+  <!-- Footer -->
+  <div id="footer-root"></div>
+
+  <a href="#" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <script>
+    // Load components
+    const components = [
+      { id: 'header-root', file: 'components/header.html' },
+      { id: 'hero-root', file: 'components/hero.html' },
+      { id: 'about-root', file: 'components/about.html' },
+      { id: 'philosophy-root', file: 'components/philosophy.html' },
+      { id: 'framework-root', file: 'components/framework.html' },
+      { id: 'services-root', file: 'components/services.html' },
+      { id: 'testimonials-root', file: 'components/testimonials.html' },
+      { id: 'insights-root', file: 'components/insights.html' },
+      { id: 'cta-root', file: 'components/cta.html' },
+      { id: 'footer-root', file: 'components/footer.html' },
+    ];
+
+    async function loadComponents() {
+      for (const c of components) {
+        try {
+          const res = await fetch(c.file);
+          const html = await res.text();
+          document.getElementById(c.id).outerHTML = html;
+        } catch (e) {
+          console.warn('Could not load', c.file);
+        }
+      }
+      // Init JS after all components loaded
+      if (typeof initApp === 'function') initApp();
+    }
+
+    loadComponents();
+  </script>
+  <script src="main.js" defer></script>
+</body>
+</html>

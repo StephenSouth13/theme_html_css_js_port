@@ -1,0 +1,70 @@
+<!-- ============================================================
+     ABOUT COMPONENT
+     ============================================================ -->
+<section id="about" class="section-pad" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="about__inner">
+
+      <!-- LEFT: Video thumbnail -->
+      <div class="reveal reveal--left">
+        <div class="about__video-wrap" id="videoTrigger">
+          <img
+            class="about__video-thumb"
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80"
+            alt="Smentor — Cộng đồng mentoring"
+          />
+          <button class="about__play-btn" aria-label="Xem video">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT: Content -->
+      <div class="reveal reveal--right" style="transition-delay:0.15s">
+        <div class="eyebrow">Về Smentor</div>
+        <h2 class="section-title">
+          Hành trình 5 năm<br>
+          kiến tạo thế hệ trẻ Việt Nam
+        </h2>
+        <p style="font-size:var(--text-base);color:var(--text-mid);line-height:1.8;margin-bottom:var(--sp-5)">
+          Smentor là tổ chức xã hội hoạt động với mục tiêu xây dựng thế hệ Việt Nam tự tin, năng động và sẵn sàng tạo ra tác động tích cực cho cộng đồng.
+        </p>
+
+        <ul class="about__checklist">
+          <li class="about__check-item">
+            <div class="about__check-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Kết nối sinh viên với mentor giàu kinh nghiệm
+          </li>
+          <li class="about__check-item">
+            <div class="about__check-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Định hướng nghề nghiệp và phát triển kỹ năng
+          </li>
+          <li class="about__check-item">
+            <div class="about__check-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Tạo môi trường học hỏi và thực hành qua dự án
+          </li>
+          <li class="about__check-item">
+            <div class="about__check-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Xây dựng cộng đồng tích cực và bền vững
+          </li>
+        </ul>
+
+        <a href="#programs" class="btn btn--navy">
+          Tìm hiểu thêm về chúng tôi
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal__inner">
+    <button class="video-modal__close" id="videoModalClose" aria-label="Đóng">✕</button>
+    <div class="video-modal__frame">
+      <span>▶ Video Smentor</span>
+    </div>
+  </div>
+</div>
