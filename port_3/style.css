@@ -1,3 +1,4 @@
+
 /* ============================================================
    QUÁCH THÀNH LONG PORTFOLIO — style.css
    Light theme · Purple accent · Script + Sans serif
@@ -102,7 +103,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 /* ---- FADE IN ANIMATION ---- */
 .fade-up {
-  opacity: 0; transform: translateY(28px);
+  opacity: 1; transform: translateY(28px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .fade-up.visible { opacity: 1; transform: none; }
@@ -185,7 +186,7 @@ button { font-family: inherit; cursor: pointer; border: none; }
 .mobile-nav a:hover { color: var(--purple); }
 
 /* ============================================================
-   HERO SECTION - RESPONSIVE OPTIMIZED
+   HERO
    ============================================================ */
 #hero {
   min-height: 100vh;
@@ -194,71 +195,107 @@ button { font-family: inherit; cursor: pointer; border: none; }
   display: flex; align-items: center;
   position: relative; overflow: hidden;
 }
-
+/* Subtle decorative blobs */
+#hero::before {
+  content: ''; position: absolute;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(168,85,247,0.12) 0%, transparent 70%);
+  top: -100px; right: -80px; pointer-events: none;
+}
+#hero::after {
+  content: ''; position: absolute;
+  width: 350px; height: 350px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%);
+  bottom: 0; left: -80px; pointer-events: none;
+}
 .hero-inner {
-  display: grid; 
-  grid-template-columns: 1fr; /* Mặc định mobile */
-  gap: 60px;
-  padding: 80px 0;
-  align-items: center;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 48px;
+  padding: 60px 0 80px; position: relative; z-index: 1;
 }
-
-/* Desktop Layout */
-@media (min-width: 992px) {
-  .hero-inner { grid-template-columns: 1fr 1fr; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--purple-soft); border: 1px solid var(--border-purple);
+  padding: 5px 14px; border-radius: 50px;
+  font-size: 11.5px; font-weight: 700; color: var(--purple);
+  letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px;
 }
-
-/* Visual Container */
-.hero-visual { 
-  position: relative; 
-  width: 100%; 
-  max-width: 400px;
-  margin: 0 auto;
-  min-height: 500px;
+.hero-eyebrow::before { content: '✦'; font-size: 9px; }
+.hero-name {
+  font-size: clamp(42px, 6vw, 68px);
+  font-weight: 900; line-height: 1.0;
+  color: var(--text); margin-bottom: 10px; letter-spacing: -0.02em;
 }
-
-/* Ảnh chân dung (Túi bo góc) */
+.hero-tagline {
+  font-family: var(--script);
+  font-size: clamp(22px, 3vw, 30px);
+  color: var(--purple); margin-bottom: 20px; line-height: 1.3;
+}
+.hero-desc {
+  font-size: 15px; color: var(--text-mid);
+  line-height: 1.75; margin-bottom: 28px; max-width: 460px;
+}
+/* Inline stats row */
+.hero-stats {
+  display: flex; gap: 32px; margin-bottom: 32px; flex-wrap: wrap;
+}
+.hero-stat-val {
+  font-size: 22px; font-weight: 900; color: var(--text); display: block;
+}
+.hero-stat-label { font-size: 11px; color: var(--text-muted); margin-top: 1px; }
+.hero-stat-item { border-right: 1px solid var(--border); padding-right: 32px; }
+.hero-stat-item:last-child { border-right: none; padding-right: 0; }
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-social-row {
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-social-row span { font-size: 12.5px; color: var(--text-muted); margin-right: 4px; }
+.s-icon {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #fff; border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-mid); font-size: 15px;
+  transition: var(--transition); box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.s-icon:hover { border-color: var(--purple); color: var(--purple); transform: translateY(-2px); }
+/* Hero right visual */
+.hero-visual { position: relative; height: 520px; }
 .hero-photo-wrap {
-  width: 280px; 
-  height: 380px;
-  margin: 0 auto;
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 320px; height: 460px;
   background: linear-gradient(160deg, var(--purple-soft), #fce7f3);
-  border-radius: 120px 120px 80px 80px;
+  border-radius: 160px 160px 120px 120px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(124,58,237,0.15);
+  box-shadow: 0 20px 60px rgba(124,58,237,0.2);
 }
-
 .hero-photo-wrap img {
-  width: 100%; height: 100%; 
-  object-fit: cover; object-position: top center;
+  width: 100%; height: 100%; object-fit: cover; object-position: top center;
 }
-
-/* Floating Cards Logic */
+/* Floating cards */
 .hero-float {
-  position: absolute; 
-  background: #fff;
+  position: absolute; background: #fff;
   border-radius: var(--radius-md);
-  padding: 12px 16px;
-  box-shadow: 0 8px 24px rgba(124,58,237,0.12);
-  z-index: 3;
+  padding: 14px 18px;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.14);
   animation: floatY 4s ease-in-out infinite;
+  z-index: 2;
 }
-
-/* Vị trí desktop */
-@media (min-width: 769px) {
-  .hero-photo-wrap { width: 320px; height: 460px; border-radius: 160px 160px 120px 120px; }
-  .f-revenue { top: 60px; right: -20px; }
-  .f-video   { bottom: 100px; right: -30px; }
-  .f-conv    { bottom: 180px; left: -30px; }
+.hero-float.f-revenue { top: 60px; right: -8px; animation-delay: 0s; }
+.hero-float.f-video   { bottom: 100px; right: -16px; animation-delay: 0.6s; }
+.hero-float.f-conv    { bottom: 180px; left: -16px; animation-delay: 1.1s; }
+.float-label { font-size: 10.5px; color: var(--text-muted); margin-bottom: 3px; }
+.float-val   { font-size: 20px; font-weight: 900; color: var(--text); }
+.float-sub   { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+.float-icon-play {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--purple); display: flex; align-items: center;
+  justify-content: center; position: absolute; right: 14px; top: 50%;
+  transform: translateY(-50%);
 }
-
-/* Vị trí mobile - Ổn định */
-@media (max-width: 768px) {
-  .f-revenue { top: 0; right: 0; transform: scale(0.85); }
-  .f-video   { bottom: 20px; right: 0; transform: scale(0.85); }
-  .f-conv    { bottom: 80px; left: 0; transform: scale(0.85); }
+.float-icon-play svg { color: #fff; }
+.float-chart {
+  margin-top: 6px;
 }
-
 @keyframes floatY {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-9px); }
@@ -603,4 +640,131 @@ button { font-family: inherit; cursor: pointer; border: none; }
   .footer-grid { grid-template-columns: 1fr; }
   .projects-header, .brands-row { flex-direction: column; align-items: flex-start; gap: 8px; }
   .slider-nav { display: none; }
+}
+/* ============================================================
+   CONTACT
+   ============================================================ */
+
+.contact__message{
+  margin-top:16px;
+  font-size:.95rem;
+  font-weight:600;
+}
+
+.contact__message.success{
+  color:#10b981;
+}
+
+.contact__message.error{
+  color:#ef4444;
+}
+/* ============================================================
+   SFORM STYLES — Hợp nhất với thiết kế Portfolio
+   ============================================================ */
+.sform-container {
+    width: 100%;
+}
+
+.sform-content-display {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Style cho các trường nhập liệu */
+.sform-content-display input,
+.sform-content-display textarea,
+.sform-content-display select {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--bg-soft);
+    font-size: 14px;
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.sform-content-display input:focus {
+    outline: none;
+    border-color: var(--purple);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(124,58,237,0.1);
+}
+
+/* Nút Submit */
+.btn-submit-sform {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: var(--purple);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-submit-sform:hover {
+    background: var(--purple-dark);
+    transform: translateY(-2px);
+}
+
+.btn-submit-sform:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Thông báo success/error */
+.sform-message {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sform-message.success { color: #10b981; }
+.sform-message.error { color: #ef4444; }
+
+/* Responsive cho Sform */
+@media (max-width: 768px) {
+    .sform-content-display { gap: 12px; }
+}
+/* Styling cho container của anh Ban để nó khớp với Portfolio */
+.sform-container {
+    background: var(--bg-soft);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border);
+}
+
+/* Đảm bảo các input của anh Ban trông hiện đại */
+.sform-content-display input, 
+.sform-content-display textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.sform-content-display .btn-submit-sform {
+    padding: 12px 30px;
+    background: var(--theme-color); /* Màu của portfolio ông */
+    color: white;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sform-content-display .btn-submit-sform:hover {
+    filter: brightness(1.2);
 }

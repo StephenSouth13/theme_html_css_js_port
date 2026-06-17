@@ -438,7 +438,21 @@
     </div>
   </div>
 </section>
+<!-- Trong file index.html, đặt tại nơi ông muốn hiển thị contact -->
+<div id="contact-wrapper"></div>
 
+<script>
+  // Script đơn giản để load file contact.html vào div
+  fetch('components/contact.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('contact-wrapper').innerHTML = data;
+        // Sau khi load xong HTML, hệ thống mới gọi form
+        if (typeof SFORM_COMPONENT !== 'undefined') {
+            SFORM_COMPONENT.showSform(jQuery('.sform-container'));
+        }
+    });
+</script>
 <!-- ===============================================================
      FOOTER
      =============================================================== -->
@@ -511,7 +525,27 @@
 <button id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Về đầu trang">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/lp.js"></script>
 
 <script src="main.js"></script>
+<script>
+  fetch('components/contact.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('contact-wrapper').innerHTML = data;
+        
+        // Đợi 1 chút cho lp.js khởi tạo xong rồi mới gọi form
+        setTimeout(() => {
+            if (typeof SFORM_COMPONENT !== 'undefined') {
+                jQuery('.sform-container').each(function() {
+                    SFORM_COMPONENT.showSform(jQuery(this));
+                });
+            } else {
+                console.error("❌ lp.js chưa được load hoặc SFORM_COMPONENT bị lỗi!");
+            }
+        }, 1000);
+    });
+</script>
 </body>
 </html>
