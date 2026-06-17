@@ -80,29 +80,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* --- HÀM KHỞI TẠO SFORM AN TOÀN --- */
-/* --- KHỞI TẠO SFORM MỚI (Tích hợp chuẩn) --- */
 $(window).on('load', function() {
-    console.log("Đang kiểm tra SFORM_COMPONENT...");
-    
-    let attempts = 0;
     const checkInterval = setInterval(function() {
-        attempts++;
-        // Kiểm tra biến hệ thống của anh Ban
         if (typeof SFORM_COMPONENT !== 'undefined') {
             clearInterval(checkInterval);
-            console.log("✅ Hệ thống đã sẵn sàng, đang nạp form...");
-            
-            // Tìm container và nạp form
             $('.sform-container').each(function() {
                 SFORM_COMPONENT.showSform($(this));
             });
-        }
-        
-        // Dừng sau 10 giây nếu không thấy hệ thống
-        if (attempts > 20) {
-            clearInterval(checkInterval);
-            console.error("❌ Không tìm thấy SFORM_COMPONENT! Kiểm tra lại file lp.js.");
         }
     }, 500);
 });

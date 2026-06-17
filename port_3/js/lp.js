@@ -242,7 +242,7 @@ function SformComponent(){
     this.showSform = function($sformContainer) {
         let code = $sformContainer.data('code');
         $.ajax({
-            url: '/api/v0/sform/'+code+'/get-sform',
+            url: 'https://markety.top/api/v0/sform/'+code+'/get-sform',
             type: "GET",
             contentType: "application/json",
             success: function (sformDTO) {
