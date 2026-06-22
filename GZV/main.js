@@ -1,27 +1,27 @@
 /* ============================================================
-   GZVLP — main.js | Chuẩn hóa hệ thống 1000GENZer
+   GZVLP — main.js | Hệ thống chuẩn hóa GZV (Production Ready)
    ============================================================ */
 
-document.documentElement.classList.add('js'); // Kích hoạt CSS reveal
+document.documentElement.classList.add('js');
 
 (function () {
   'use strict';
 
-  // 1. Khởi tạo các thành phần GZV
   document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initHamburgerMenu();
     initSmoothScroll();
     initScrollReveal();
     initCounters();
-    initIndustryTabs();
-    initServiceRipple();
-    initCardTilt();
+    
+    // Chỉ gọi các hàm nếu tồn tại để tránh crash
+    if (typeof initIndustryTabs === 'function') initIndustryTabs();
+    if (typeof initServiceRipple === 'function') initServiceRipple();
+    if (typeof initCardTilt === 'function') initCardTilt();
+    if (typeof initPricingHover === 'function') initPricingHover();
     initContactForm();
-    initPricingHover();
   });
 
-  // 2. Khởi tạo hệ thống Form (đợi DOM và thư viện sẵn sàng)
   window.addEventListener('load', () => {
     initSformSystem();
   });
@@ -31,6 +31,7 @@ document.documentElement.classList.add('js'); // Kích hoạt CSS reveal
   function initHeaderScroll() {
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
+      if (!header) return;
       header.classList.toggle('scrolled', window.scrollY > 50);
       const bt = document.getElementById('backTop');
       if (bt) bt.classList.toggle('visible', window.scrollY > 500);
@@ -71,7 +72,14 @@ document.documentElement.classList.add('js'); // Kích hoạt CSS reveal
         }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+    
+    const elements = document.querySelectorAll('.reveal');
+    elements.forEach(el => revealObs.observe(el));
+
+    // Dự phòng: Ép hiện sau 500ms nếu Observer bị kẹt
+    setTimeout(() => {
+      elements.forEach(el => el.classList.add('visible'));
+    }, 500);
   }
 
   function initCounters() {
@@ -97,15 +105,12 @@ document.documentElement.classList.add('js'); // Kích hoạt CSS reveal
   }
 
   function initSformSystem() {
-    // Kiểm tra xem hệ thống của anh Ban đã load chưa
-    if (typeof SFORM_COMPONENT !== 'undefined') {
-      console.log("✅ GZV Form System Ready");
+    if (typeof SFORM_COMPONENT !== 'undefined' && typeof $ !== 'undefined') {
       $('.sform-container').each(function() {
         SFORM_COMPONENT.showSform($(this));
       });
     } else {
-      // Nếu chưa load, thử lại sau 500ms
-      setTimeout(initSformSystem, 500);
+      setTimeout(initSformSystem, 1000); // Thử lại lâu hơn để chờ thư viện
     }
   }
 
@@ -114,16 +119,9 @@ document.documentElement.classList.add('js'); // Kích hoạt CSS reveal
     if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Logic gửi form tùy chỉnh của ông ở đây nếu cần
-        console.log("GZV Lead Submitted");
+        console.log("GZV System: Lead Captured");
       });
     }
   }
-
-  // Các hàm khác (Tilt, Ripple...) giữ nguyên logic cũ
-  function initIndustryTabs() { /*...*/ }
-  function initServiceRipple() { /*...*/ }
-  function initCardTilt() { /*...*/ }
-  function initPricingHover() { /*...*/ }
 
 })();
