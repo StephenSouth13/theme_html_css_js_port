@@ -875,17 +875,21 @@ input, textarea, select { font-family: inherit; outline: none; }
   .ind-more-btn { grid-column: span 1; }
 }
 /* Sửa class reveal để tránh bị ẩn vĩnh viễn */
+/* Xóa bỏ sự phụ thuộc vào class 'js' từ JS */
 .reveal {
-  opacity: 1; /* Mặc định cho hiện trước */
+  opacity: 1; /* Luôn hiển thị mặc định */
   transform: translateY(0);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
-/* Chỉ ẩn khi JS đã sẵn sàng */
-.js .reveal {
-  opacity: 0;
-  transform: translateY(30px);
-}
-.js .reveal.visible {
-  opacity: 1;
-  transform: none;
+
+/* Chỉ thêm hiệu ứng ẩn nếu trình duyệt hỗ trợ IntersectionObserver */
+@supports (display: grid) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: none;
+  }
 }
