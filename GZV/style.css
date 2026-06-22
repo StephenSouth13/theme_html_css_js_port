@@ -21,16 +21,19 @@ input, textarea, select { font-family: inherit; outline: none; }
 
 /* ---- CSS VARIABLES ---- */
 :root {
-  --purple:       #6c3afd;
-  --purple-light: #8b5cf6;
-  --purple-soft:  #ede9fe;
-  --purple-mid:   #c4b5fd;
-  --purple-dark:  #4c1d95;
-  --purple-glow:  rgba(108,58,253,0.25);
+  /* Cập nhật màu thương hiệu GZV */
+  --purple:       #003399; /* Xanh GZV (thay thế màu tím cũ) */
+  --purple-light: #0055cc;
+  --purple-soft:  #e6f0ff;
+  --purple-mid:   #99c2ff;
+  --purple-dark:  #001a4d;
+  --purple-glow:  rgba(0,51,153,0.15);
+  
+  /* Giữ các màu bổ trợ khác */
   --blue:         #3b82f6;
   --green:        #10b981;
   --orange:       #f59e0b;
-  --pink:         #ec4899;
+  --pink:         #e60000; /* Đỏ GZV */
   --bg:           #ffffff;
   --bg-soft:      #fafafa;
   --bg-lavender:  #f5f3ff;
@@ -870,4 +873,19 @@ input, textarea, select { font-family: inherit; outline: none; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
   .form-row { grid-template-columns: 1fr; }
   .ind-more-btn { grid-column: span 1; }
+}
+/* Sửa class reveal để tránh bị ẩn vĩnh viễn */
+.reveal {
+  opacity: 1; /* Mặc định cho hiện trước */
+  transform: translateY(0);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+/* Chỉ ẩn khi JS đã sẵn sàng */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.js .reveal.visible {
+  opacity: 1;
+  transform: none;
 }
