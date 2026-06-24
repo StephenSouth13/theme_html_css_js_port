@@ -1,331 +1,826 @@
-/* ============================================================
-   1000GENZER — main.js  |  Full interactions & FX
-   ============================================================ */
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Smentor — Hệ sinh thái mentoring kết nối người trẻ với chuyên gia. Tham gia cộng đồng 30.000+ sinh viên Việt Nam."/>
+  <meta name="theme-color" content="#1e3a5f"/>
+  <meta property="og:title"       content="Smentor | Kết Nối Người Dẫn Đường"/>
+  <meta property="og:description" content="Khai phóng tiềm năng trẻ qua hệ sinh thái mentoring hàng đầu Việt Nam."/>
+  <meta property="og:type"        content="website"/>
+  <title>Smentor | Kết Nối Người Dẫn Đường – Khai Phóng Tiềm Năng Trẻ</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+</head>
+<body>
 
-(function () {
-  'use strict';
+<!-- ================================================================ HEADER -->
+<header id="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="#hero" class="header__logo">
+        <div class="header__logo-icon">S</div>
+        <div>
+          <span>smentor</span>
+          <small class="header__logo-sub">Kết nối dẫn đường khởi nghiệp</small>
+        </div>
+      </a>
+      <nav class="header__nav">
+        <a href="#about">Về chúng tôi</a>
+        <a href="#programs">Dự án</a>
+        <a href="#programs">Chương trình</a>
+        <a href="#partners">Đối tác</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+      <div class="header__actions">
+        <a href="#contact" class="btn btn--outline btn--sm">Đăng nhập</a>
+        <a href="#contact" class="btn btn--primary btn--sm">Tham gia ngay</a>
+      </div>
+      <div class="hamburger" id="hamburger" aria-expanded="false" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
 
-  /* ====================================================
-     1. HEADER — scroll behaviour + active nav
-  ==================================================== */
-  const header = document.getElementById('header');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const sections = document.querySelectorAll('section[id]');
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#about">Về chúng tôi</a>
+  <a href="#programs">Chương trình</a>
+  <a href="#partners">Đối tác</a>
+  <a href="#gallery">Khoảnh khắc</a>
+  <a href="#team">Đội ngũ</a>
+  <a href="#contact">Liên hệ</a>
+  <div style="display:flex;gap:12px;margin-top:8px">
+    <a href="#contact" class="btn btn--outline"  style="flex:1;justify-content:center">Đăng nhập</a>
+    <a href="#contact" class="btn btn--primary" style="flex:1;justify-content:center">Tham gia ngay</a>
+  </div>
+</nav>
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+<!-- ================================================================ HERO -->
+<section id="hero">
+  <div class="hero__bg-mesh"></div>
+  <div class="hero__dots">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="container" style="width:100%">
+    <div class="hero__inner">
 
-  function onScroll () {
-    // Scrolled class
-    header.classList.toggle('scrolled', window.scrollY > 50);
+      <div class="hero__content reveal reveal--up">
+        <div class="hero__eyebrow">
+          <span class="badge badge--navy">
+            <span class="badge--pulse"></span>
+            Cộng đồng mentoring #1 Việt Nam
+          </span>
+        </div>
+        <h1 class="hero__h1">
+          Kết Nối Người Dẫn Đường<br>
+          <em>Khai Phóng Tiềm Năng Trẻ</em>
+        </h1>
+        <p class="hero__desc">
+          Smentor xây dựng hệ sinh thái mentoring hỗ trợ người trẻ phát triển toàn diện tư duy, kỹ năng và định hướng nghề nghiệp cùng các chuyên gia.
+        </p>
+        <div class="hero__btns">
+          <a href="#contact" class="btn btn--primary btn--lg">
+            Trở thành Mentee
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--outline btn--lg">Đăng ký làm Mentor</a>
+        </div>
+        <div class="hero__social-proof">
+          <div class="hero__avatars">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&q=80" alt=""/>
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80" alt=""/>
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80" alt=""/>
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80" alt=""/>
+          </div>
+          <div class="hero__proof-text">
+            Được tin tưởng bởi hơn <strong>30.000+ sinh viên</strong>
+          </div>
+        </div>
+      </div>
 
-    // Back-to-top
-    const bt = document.getElementById('backTop');
-    if (bt) bt.classList.toggle('visible', window.scrollY > 500);
+      <div class="hero__visual reveal reveal--right" style="transition-delay:0.2s">
+        <div class="hero__collage">
+          <div class="hero__collage-img hero__collage-img--main">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80" alt="Smentor community"/>
+          </div>
+          <div class="hero__collage-img hero__collage-img--top">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80" alt="Event"/>
+          </div>
+          <div class="hero__collage-img hero__collage-img--bot">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&q=80" alt="Workshop"/>
+          </div>
+        </div>
+        <div class="hero__float-card">
+          <div class="hero__float-logo"><span class="dot"></span>Smentor Community</div>
+          <div class="hero__float-stat">
+            <div class="hero__float-stat-item">
+              <span class="hero__float-stat-val">30.000+</span>
+              <div class="hero__float-stat-label">Thành viên</div>
+            </div>
+            <div class="hero__float-stat-item">
+              <span class="hero__float-stat-val">500+</span>
+              <div class="hero__float-stat-label">Mentor</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    // Active nav based on scroll position
-    let current = '';
-    sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 100) current = sec.id;
-    });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-    });
-  }
+    </div>
+  </div>
+</section>
 
-  /* ====================================================
-     2. HAMBURGER MENU
-  ==================================================== */
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobileNav');
+<!-- STATS STRIP -->
+<div class="hero__stats-strip reveal reveal--up">
+  <div class="container">
+    <div class="hero__stats-inner">
+      <div class="hero__stat">
+        <div class="hero__stat-icon">🎓</div>
+        <div>
+          <span class="hero__stat-val" data-count="30000" data-format="30.000+">30.000+</span>
+          <div class="hero__stat-label">Sinh viên tham gia</div>
+        </div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-icon">🧑‍💼</div>
+        <div>
+          <span class="hero__stat-val" data-count="500" data-format="500+">500+</span>
+          <div class="hero__stat-label">Mentor đồng hành</div>
+        </div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-icon">🏢</div>
+        <div>
+          <span class="hero__stat-val" data-count="40" data-format="40+">40+</span>
+          <div class="hero__stat-label">Doanh nghiệp đồng hành</div>
+        </div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-icon">📍</div>
+        <div>
+          <span class="hero__stat-val" data-count="12">12</span>
+          <div class="hero__stat-label">Tỉnh thành hoạt động</div>
+        </div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-icon">🏆</div>
+        <div>
+          <span class="hero__stat-val" data-count="150" data-format="150+">150+</span>
+          <div class="hero__stat-label">Sự kiện đã tổ chức</div>
+        </div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-icon">🌱</div>
+        <div>
+          <span class="hero__stat-val">5 năm</span>
+          <div class="hero__stat-label">Hành trình phát triển</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  if (hamburger && mobileNav) {
-    hamburger.addEventListener('click', () => {
-      const open = mobileNav.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', open);
-      const [s1, , s3] = hamburger.querySelectorAll('span');
-      if (open) {
-        s1.style.cssText = 'transform:rotate(45deg) translate(5px,5px)';
-        hamburger.querySelectorAll('span')[1].style.opacity = '0';
-        s3.style.cssText = 'transform:rotate(-45deg) translate(5px,-5px)';
-      } else {
-        hamburger.querySelectorAll('span').forEach(s => s.style.cssText = '');
-      }
-      document.body.style.overflow = open ? 'hidden' : '';
-    });
+<!-- ================================================================ ABOUT -->
+<section id="about" class="section-pad" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="about__inner">
+      <div class="reveal reveal--left">
+        <div class="about__video-wrap" id="videoTrigger" style="cursor:pointer">
+          <img class="about__video-thumb" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=700&q=80" alt="Smentor"/>
+          <button class="about__play-btn" aria-label="Xem video">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="reveal reveal--right" style="transition-delay:0.15s">
+        <div class="eyebrow">Về Smentor</div>
+        <h2 class="section-title">Hành trình 5 năm<br>kiến tạo thế hệ trẻ Việt Nam</h2>
+        <p style="font-size:var(--text-base);color:var(--text-mid);line-height:1.8;margin-bottom:var(--sp-5)">
+          Smentor là tổ chức xã hội hoạt động với mục tiêu xây dựng thế hệ Việt Nam tự tin, năng động và sẵn sàng tạo ra tác động tích cực cho cộng đồng.
+        </p>
+        <ul class="about__checklist">
+          <li class="about__check-item">
+            <div class="about__check-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Kết nối sinh viên với mentor giàu kinh nghiệm
+          </li>
+          <li class="about__check-item">
+            <div class="about__check-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Định hướng nghề nghiệp và phát triển kỹ năng
+          </li>
+          <li class="about__check-item">
+            <div class="about__check-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Tạo môi trường học hỏi và thực hành qua dự án
+          </li>
+          <li class="about__check-item">
+            <div class="about__check-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Xây dựng cộng đồng tích cực và bền vững
+          </li>
+        </ul>
+        <a href="#programs" class="btn btn--navy">
+          Tìm hiểu thêm về chúng tôi
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    mobileNav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        mobileNav.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', false);
-        hamburger.querySelectorAll('span').forEach(s => s.style.cssText = '');
-        document.body.style.overflow = '';
-      });
-    });
-  }
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Video Smentor">
+  <div class="video-modal__inner">
+    <button class="video-modal__close" id="videoModalClose" aria-label="Đóng">✕</button>
+    <div class="video-modal__frame">
+      <span>▶ &nbsp; Xem video về Smentor</span>
+    </div>
+  </div>
+</div>
 
-  /* ====================================================
-     3. SMOOTH SCROLL (all #anchors)
-  ==================================================== */
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const id = a.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if (target) {
-        e.preventDefault();
-        window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
-      }
-    });
-  });
+<!-- ================================================================ VALUES -->
+<section id="values" class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center reveal reveal--up">
+      <div class="eyebrow" style="justify-content:center">Giá trị cốt lõi</div>
+      <h2 class="section-title section-title--center">Những giá trị định hướng mọi hoạt động</h2>
+      <p class="section-sub section-sub--center">Chúng tôi tin rằng mỗi người trẻ đều có tiềm năng vô hạn và cần môi trường đúng để tỏa sáng</p>
+    </div>
+    <div class="values__grid">
+      <div class="values__card reveal reveal--up">
+        <div class="values__icon">🤝</div>
+        <div class="values__name">Kết nối</div>
+        <p class="values__desc">Kết nối 1:1 với người dẫn đường phù hợp để phát triển bản thân</p>
+      </div>
+      <div class="values__card reveal reveal--up" style="transition-delay:0.08s">
+        <div class="values__icon">📚</div>
+        <div class="values__name">Học hỏi</div>
+        <p class="values__desc">Học hỏi liên tục từ cộng đồng để phát triển không ngừng</p>
+      </div>
+      <div class="values__card reveal reveal--up" style="transition-delay:0.16s">
+        <div class="values__icon">⚡</div>
+        <div class="values__name">Thực hành</div>
+        <p class="values__desc">Học đi đôi với hành qua các dự án thực tiễn có tác động</p>
+      </div>
+      <div class="values__card reveal reveal--up" style="transition-delay:0.24s">
+        <div class="values__icon">👑</div>
+        <div class="values__name">Lãnh đạo</div>
+        <p class="values__desc">Phát triển tư duy lãnh đạo và khả năng dẫn dắt người khác</p>
+      </div>
+      <div class="values__card reveal reveal--up" style="transition-delay:0.32s">
+        <div class="values__icon">💚</div>
+        <div class="values__name">Tác động</div>
+        <p class="values__desc">Tạo ra tác động tích cực và bền vững cho cộng đồng</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  // Back to top
-  const backTop = document.getElementById('backTop');
-  if (backTop) {
-    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  }
+<!-- ================================================================ PROGRAMS -->
+<section id="programs" class="section-pad" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="text-center reveal reveal--up">
+      <div class="eyebrow" style="justify-content:center">Chương trình nổi bật</div>
+      <h2 class="section-title section-title--center">Các chương trình mentoring và phát triển dành cho sinh viên</h2>
+    </div>
+    <div class="programs__grid">
+      <div class="prog-card reveal reveal--up">
+        <div class="prog-card__bg"></div>
+        <div class="prog-card__img"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Mentoring 1:1"/></div>
+        <div class="prog-card__overlay"></div>
+        <div class="prog-card__content">
+          <div class="prog-card__icon">🤝</div>
+          <div class="prog-card__title">Mentoring 1:1</div>
+          <p class="prog-card__desc">Kết nối 1:1 với mentor trong 3-6 tháng để phát triển toàn diện tư duy, kỹ năng và định hướng sự nghiệp.</p>
+          <a href="#contact" class="prog-card__link">Tìm hiểu thêm <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="prog-card reveal reveal--up" style="transition-delay:0.1s">
+        <div class="prog-card__bg"></div>
+        <div class="prog-card__img"><img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=80" alt="Career Development"/></div>
+        <div class="prog-card__overlay"></div>
+        <div class="prog-card__content">
+          <div class="prog-card__icon">🚀</div>
+          <div class="prog-card__title">Career Development</div>
+          <p class="prog-card__desc">Chuỗi workshop và khóa học về kỹ năng nghề nghiệp, phỏng vấn, CV và định hướng sự nghiệp thực chiến.</p>
+          <a href="#contact" class="prog-card__link">Tìm hiểu thêm <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="prog-card reveal reveal--up" style="transition-delay:0.2s">
+        <div class="prog-card__bg"></div>
+        <div class="prog-card__img"><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Leadership Program"/></div>
+        <div class="prog-card__overlay"></div>
+        <div class="prog-card__content">
+          <div class="prog-card__icon">👑</div>
+          <div class="prog-card__title">Leadership Program</div>
+          <p class="prog-card__desc">Chương trình phát triển kỹ năng lãnh đạo cho sinh viên có tiềm năng và mong muốn tạo tác động lớn.</p>
+          <a href="#contact" class="prog-card__link">Tìm hiểu thêm <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="programs__dots reveal reveal--up">
+      <div class="prog-dot is-active"></div>
+      <div class="prog-dot"></div>
+      <div class="prog-dot"></div>
+      <div class="prog-dot"></div>
+      <div class="prog-dot"></div>
+    </div>
+  </div>
+</section>
 
-  /* ====================================================
-     4. SCROLL REVEAL (IntersectionObserver)
-  ==================================================== */
-  const revealEls = document.querySelectorAll('.reveal');
+<!-- ================================================================ TESTIMONIALS -->
+<section id="testimonials" class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="text-center reveal reveal--up">
+      <div class="eyebrow" style="justify-content:center">Học viên nói gì về Smentor</div>
+      <h2 class="section-title section-title--center">Những chia sẻ chân thực từ cộng đồng</h2>
+    </div>
+    <div class="testi__track-wrap">
+      <div class="testi__track" id="testiTrack">
+        <div class="testi-card">
+          <div class="testi-card__quote">"</div>
+          <p class="testi-card__text">Smentor giúp mình định hướng sự nghiệp rõ ràng và kết nối với những người anh chị tuyệt vời trong ngành. Một trải nghiệm thực sự thay đổi cuộc đời!</p>
+          <div class="testi-card__author">
+            <img class="testi-card__avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Nguyễn Minh Anh"/>
+            <div>
+              <div class="testi-card__name">Nguyễn Minh Anh</div>
+              <div class="testi-card__role">Product Manager tại Shopee</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-card__quote">"</div>
+          <p class="testi-card__text">Nhờ có mentor, mình đã phát triển rất nhiều kỹ năng và tự tin hơn trong công việc. Các workshop của Smentor rất thiết thực và có chiều sâu.</p>
+          <div class="testi-card__author">
+            <img class="testi-card__avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Trần Quốc Bảo"/>
+            <div>
+              <div class="testi-card__name">Trần Quốc Bảo</div>
+              <div class="testi-card__role">Data Analyst tại Grab</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-card__quote">"</div>
+          <p class="testi-card__text">Các sự kiện và workshop của Smentor rất chất lượng và thực sự hữu ích. Tôi học được rất nhiều từ những mentor tuyệt vời có kinh nghiệm thực chiến.</p>
+          <div class="testi-card__author">
+            <img class="testi-card__avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Lê Khánh Vy"/>
+            <div>
+              <div class="testi-card__name">Lê Khánh Vy</div>
+              <div class="testi-card__role">Marketing Executive tại TikTok</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-card__quote">"</div>
+          <p class="testi-card__text">Chương trình Mentoring 1:1 giúp tôi xác định mục tiêu rõ ràng và có lộ trình cụ thể. Mentor của tôi không chỉ chia sẻ kiến thức mà còn truyền cảm hứng.</p>
+          <div class="testi-card__author">
+            <img class="testi-card__avatar" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Phạm Đức Anh"/>
+            <div>
+              <div class="testi-card__name">Phạm Đức Anh</div>
+              <div class="testi-card__role">Software Engineer tại VNG</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <div class="testi-card__quote">"</div>
+          <p class="testi-card__text">Smentor không chỉ là nơi học kỹ năng mà còn là cộng đồng ấm áp giúp tôi mở rộng network và tìm thấy những cơ hội nghề nghiệp tuyệt vời.</p>
+          <div class="testi-card__author">
+            <img class="testi-card__avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Hoàng Thu Hà"/>
+            <div>
+              <div class="testi-card__name">Hoàng Thu Hà</div>
+              <div class="testi-card__role">UX Designer tại Zalo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:12px;margin-top:28px">
+      <button class="testi__nav-btn" id="testiPrev2" aria-label="Trước">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="testi__nav-btn" id="testiNext2" aria-label="Tiếp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
 
-  const revealObs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const delay = parseFloat(el.style.transitionDelay || el.dataset.delay || '0') * 1000;
-      setTimeout(() => el.classList.add('visible'), delay);
-      revealObs.unobserve(el);
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+<!-- ================================================================ PARTNERS -->
+<section id="partners" style="background:var(--gray-50);padding:48px 0">
+  <div class="partners__label">Đối tác đồng hành — Cùng Smentor tạo tác động tích cực</div>
+  <div class="partners__track-wrap">
+    <div class="partners__track" id="partnersTrack">
+      <span class="partner-logo"><b style="color:#4285f4">G</b>oogle</span>
+      <span class="partner-logo">🪟 Microsoft</span>
+      <span class="partner-logo" style="color:#ee4d2d">🛍 Shopee</span>
+      <span class="partner-logo" style="color:#00b14f">🚗 Grab</span>
+      <span class="partner-logo" style="color:#0066ff">UNG</span>
+      <span class="partner-logo">MoMo</span>
+      <span class="partner-logo" style="color:#cc0000">Viettel</span>
+      <span class="partner-logo" style="color:#ff6600">FPT</span>
+      <span class="partner-logo">♪ TikTok</span>
+      <span class="partner-logo" style="color:#1d5df0">VinFast</span>
+      <span class="partner-logo">VNPT</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="partner-logo"><b style="color:#4285f4">G</b>oogle</span>
+      <span class="partner-logo">🪟 Microsoft</span>
+      <span class="partner-logo" style="color:#ee4d2d">🛍 Shopee</span>
+      <span class="partner-logo" style="color:#00b14f">🚗 Grab</span>
+      <span class="partner-logo" style="color:#0066ff">UNG</span>
+      <span class="partner-logo">MoMo</span>
+      <span class="partner-logo" style="color:#cc0000">Viettel</span>
+      <span class="partner-logo" style="color:#ff6600">FPT</span>
+      <span class="partner-logo">♪ TikTok</span>
+      <span class="partner-logo" style="color:#1d5df0">VinFast</span>
+      <span class="partner-logo">VNPT</span>
+    </div>
+  </div>
+</section>
 
-  revealEls.forEach(el => revealObs.observe(el));
+<!-- ================================================================ GALLERY -->
+<section id="gallery" class="section-pad" style="background:var(--white)">
+  <div class="container--wide">
+    <div class="text-center reveal reveal--up" style="margin-bottom:32px">
+      <div class="eyebrow" style="justify-content:center">Khoảnh khắc Smentor</div>
+      <h2 class="section-title section-title--center">Những kỷ niệm đáng nhớ cùng cộng đồng</h2>
+    </div>
+    <div class="gallery__grid reveal reveal--scale">
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Event"/>
+        <button class="gallery__zoom" aria-label="Xem ảnh">🔍</button>
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&q=80" alt="Community"/>
+        <button class="gallery__zoom" aria-label="Xem ảnh">🔍</button>
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=80" alt="Conference"/>
+        <button class="gallery__zoom" aria-label="Xem ảnh">🔍</button>
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Team"/>
+        <button class="gallery__zoom" aria-label="Xem ảnh">🔍</button>
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&q=80" alt="Workshop"/>
+        <button class="gallery__zoom" aria-label="Xem ảnh">🔍</button>
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1560523159-4a9692d222ef?w=400&q=80" alt="Graduation"/>
+        <button class="gallery__zoom" aria-label="Xem ảnh">🔍</button>
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600&q=80" alt="Networking"/>
+        <button class="gallery__zoom" aria-label="Xem ảnh">🔍</button>
+      </div>
+      <div class="gallery__item">
+        <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&q=80" alt="Event 2"/>
+        <button class="gallery__zoom" aria-label="Xem ảnh">🔍</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-  /* ====================================================
-     5. COUNTER ANIMATION (data-count attr)
-  ==================================================== */
-  const counters = document.querySelectorAll('[data-count]');
-  const countObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const end = parseFloat(el.dataset.count);
-      const isFloat = String(el.dataset.count).includes('.');
-      const suffix = el.dataset.suffix || '';
-      const dur = 1800;
-      const start = performance.now();
-      const ease = t => 1 - Math.pow(1 - t, 3);
-      const tick = now => {
-        const p = Math.min((now - start) / dur, 1);
-        el.textContent = (isFloat ? (ease(p) * end).toFixed(1) : Math.round(ease(p) * end)) + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-      countObs.unobserve(el);
-    });
-  }, { threshold: 0.5 });
-  counters.forEach(el => countObs.observe(el));
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Đóng">✕</button>
+  <img class="lightbox__img" id="lightboxImg" src="" alt="Khoảnh khắc Smentor"/>
+</div>
 
-  /* ====================================================
-     6. INDUSTRY PILL TABS
-  ==================================================== */
-  const indPills = document.querySelectorAll('.industry-pill');
-  indPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      indPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-    });
-  });
+<!-- ================================================================ TEAM -->
+<section id="team" class="section-pad" style="background:var(--gray-50)">
+  <div class="container">
+    <div class="text-center reveal reveal--up">
+      <div class="eyebrow" style="justify-content:center">Đội ngũ Smentor</div>
+      <h2 class="section-title section-title--center">Những con người tâm huyết đứng sau hành trình của chúng tôi</h2>
+    </div>
+    <div class="team__grid">
+      <div class="team-card reveal reveal--up">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&q=80" alt="Nguyễn Anh Tuấn"/>
+          <div class="team-card__overlay"></div>
+          <div class="team-card__socials">
+            <a href="#" class="team-card__s-btn">in</a>
+            <a href="#" class="team-card__s-btn">f</a>
+          </div>
+        </div>
+        <div class="team-card__info">
+          <div class="team-card__name">Nguyễn Anh Tuấn</div>
+          <div class="team-card__role">Founder &amp; CEO</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal--up" style="transition-delay:0.06s">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" alt="Phạm Thảo Vy"/>
+          <div class="team-card__overlay"></div>
+          <div class="team-card__socials">
+            <a href="#" class="team-card__s-btn">in</a>
+            <a href="#" class="team-card__s-btn">f</a>
+          </div>
+        </div>
+        <div class="team-card__info">
+          <div class="team-card__name">Phạm Thảo Vy</div>
+          <div class="team-card__role">Program Director</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal--up" style="transition-delay:0.12s">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Đỗ Minh Quân"/>
+          <div class="team-card__overlay"></div>
+          <div class="team-card__socials">
+            <a href="#" class="team-card__s-btn">in</a>
+            <a href="#" class="team-card__s-btn">f</a>
+          </div>
+        </div>
+        <div class="team-card__info">
+          <div class="team-card__name">Đỗ Minh Quân</div>
+          <div class="team-card__role">Community Lead</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal--up" style="transition-delay:0.18s">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80" alt="Trần Hoàng Nam"/>
+          <div class="team-card__overlay"></div>
+          <div class="team-card__socials">
+            <a href="#" class="team-card__s-btn">in</a>
+            <a href="#" class="team-card__s-btn">f</a>
+          </div>
+        </div>
+        <div class="team-card__info">
+          <div class="team-card__name">Trần Hoàng Nam</div>
+          <div class="team-card__role">Partnership Lead</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal--up" style="transition-delay:0.24s">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80" alt="Lê Phương Linh"/>
+          <div class="team-card__overlay"></div>
+          <div class="team-card__socials">
+            <a href="#" class="team-card__s-btn">in</a>
+            <a href="#" class="team-card__s-btn">ig</a>
+          </div>
+        </div>
+        <div class="team-card__info">
+          <div class="team-card__name">Lê Phương Linh</div>
+          <div class="team-card__role">Content Lead</div>
+        </div>
+      </div>
+      <div class="team-card reveal reveal--up" style="transition-delay:0.30s">
+        <div class="team-card__photo">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80" alt="Ngô Minh Đức"/>
+          <div class="team-card__overlay"></div>
+          <div class="team-card__socials">
+            <a href="#" class="team-card__s-btn">in</a>
+            <a href="#" class="team-card__s-btn">gh</a>
+          </div>
+        </div>
+        <div class="team-card__info">
+          <div class="team-card__name">Ngô Minh Đức</div>
+          <div class="team-card__role">Technology Lead</div>
+        </div>
+      </div>
+    </div>
+    <div class="team__more reveal reveal--up">
+      <a href="#contact" class="btn btn--outline">
+        Xem thêm về đội ngũ
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
 
-  /* ====================================================
-     7. SERVICE CARD — ripple on click
-  ==================================================== */
-  document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('click', function (e) {
-      const ripple = document.createElement('span');
-      const rect = card.getBoundingClientRect();
-      const size = Math.max(rect.width, rect.height);
-      ripple.style.cssText = `
-        position:absolute; border-radius:50%;
-        width:${size}px; height:${size}px;
-        left:${e.clientX - rect.left - size/2}px;
-        top:${e.clientY - rect.top - size/2}px;
-        background:rgba(108,58,253,0.12); transform:scale(0);
-        animation:rippleAnim 0.5s ease-out forwards; pointer-events:none; z-index:10;
-      `;
-      card.appendChild(ripple);
-      setTimeout(() => ripple.remove(), 520);
-    });
-  });
+<!-- ================================================================ CTA -->
+<section id="cta" style="background:var(--gray-50);padding:var(--sp-16) 0">
+  <div class="container">
+    <div class="cta__box reveal reveal--scale">
+      <div class="cta__content">
+        <div class="badge badge--white" style="margin-bottom:var(--sp-6);display:inline-flex">
+          🚀 &nbsp; Tham gia cộng đồng 30.000+ thành viên
+        </div>
+        <h2 class="cta__title">
+          Sẵn sàng trở thành phiên bản<br>tốt hơn của chính bạn?
+        </h2>
+        <p class="cta__sub">
+          Gia nhập cộng đồng 30.000+ thành viên Smentor ngay hôm nay.<br>
+          Kết nối với mentor phù hợp và bắt đầu hành trình phát triển của bạn.
+        </p>
+        <div class="cta__btns">
+          <a href="#contact" class="btn btn--primary btn--lg">
+            Tham gia ngay
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#programs" class="btn btn--outline-white btn--lg">Tìm hiểu thêm</a>
+        </div>
+        <div style="display:flex;gap:48px;justify-content:center;margin-top:var(--sp-10);flex-wrap:wrap">
+          <div style="text-align:center"><div style="font-size:28px;font-weight:900;color:var(--white)">30.000+</div><div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:3px">Sinh viên</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.15)"></div>
+          <div style="text-align:center"><div style="font-size:28px;font-weight:900;color:var(--white)">500+</div><div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:3px">Mentor</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.15)"></div>
+          <div style="text-align:center"><div style="font-size:28px;font-weight:900;color:var(--orange-light)">5 năm</div><div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:3px">Kinh nghiệm</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.15)"></div>
+          <div style="text-align:center"><div style="font-size:28px;font-weight:900;color:var(--white)">150+</div><div style="font-size:12px;color:rgba(255,255,255,0.65);margin-top:3px">Sự kiện</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  /* ====================================================
-     8. CARD TILT (micro 3D on hover)
-  ==================================================== */
-  const tiltTargets = document.querySelectorAll(
-    '.service-card, .proj-card, .team-card, .pricing-card'
-  );
-  tiltTargets.forEach(card => {
-    card.addEventListener('mousemove', e => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - 0.5;
-      const y = (e.clientY - r.top) / r.height - 0.5;
-      card.style.transform = `perspective(700px) rotateY(${x*6}deg) rotateX(${-y*6}deg) translateY(-4px)`;
-    });
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
-  });
+<!-- ================================================================ CONTACT -->
+<section id="contact" class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="contact__inner">
+      <div class="reveal reveal--left">
+        <div class="eyebrow">Liên hệ</div>
+        <h2 class="contact__info-title">Sẵn sàng bắt đầu<br>hành trình của bạn?</h2>
+        <p class="contact__info-desc">
+          Hãy kết nối với chúng tôi để được tư vấn về chương trình phù hợp với mục tiêu và định hướng của bạn. Đội ngũ Smentor luôn sẵn sàng hỗ trợ.
+        </p>
+        <ul class="contact__detail-list">
+          <li class="contact__detail">
+            <div class="contact__detail-icon">📧</div>
+            <div>
+              <div class="contact__detail-label">Email</div>
+              <div class="contact__detail-val">contact@smentor.org</div>
+            </div>
+          </li>
+          <li class="contact__detail">
+            <div class="contact__detail-icon">📞</div>
+            <div>
+              <div class="contact__detail-label">Điện thoại</div>
+              <div class="contact__detail-val">(+84) 123 456 789</div>
+            </div>
+          </li>
+          <li class="contact__detail">
+            <div class="contact__detail-icon">📍</div>
+            <div>
+              <div class="contact__detail-label">Địa chỉ</div>
+              <div class="contact__detail-val">TP. Hồ Chí Minh, Việt Nam</div>
+            </div>
+          </li>
+          <li class="contact__detail">
+            <div class="contact__detail-icon">⏰</div>
+            <div>
+              <div class="contact__detail-label">Giờ làm việc</div>
+              <div class="contact__detail-val">Thứ 2 – Thứ 6 · 8:00 – 18:00</div>
+            </div>
+          </li>
+        </ul>
+        <div class="contact__social-row">
+          <a href="#" class="contact__s-btn" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="contact__s-btn" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="contact__s-btn" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="contact__s-btn" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+          <a href="#" class="contact__s-btn" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg></a>
+        </div>
+      </div>
+      <div class="reveal reveal--right" style="transition-delay:0.15s">
+        <div class="contact__form-card">
+          <div class="badge badge--orange" style="margin-bottom:20px">✉️ &nbsp; Đăng ký tư vấn miễn phí</div>
+          <div class="contact__form-title">Gửi thông tin của bạn</div>
+          <div class="contact__form-sub">Chúng tôi sẽ phản hồi trong vòng 24 giờ làm việc.</div>
+          <form id="contactForm" novalidate>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="fname">Họ và tên <span class="req">*</span></label>
+                <input type="text" id="fname" class="form-input" placeholder="Nguyễn Văn A" required/>
+                <div class="form-error-msg" id="fnameErr">Vui lòng nhập họ tên (≥2 ký tự).</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" class="form-input" placeholder="you@email.com" required/>
+                <div class="form-error-msg" id="emailErr">Email không hợp lệ.</div>
+              </div>
+            </div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" class="form-input" placeholder="0912 345 678"/>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="school">Trường / Tổ chức</label>
+                <input type="text" id="school" class="form-input" placeholder="ĐH Kinh tế TP.HCM"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="interest">Quan tâm đến chương trình <span class="req">*</span></label>
+              <select id="interest" class="form-select form-input" required>
+                <option value="" disabled selected>Chọn chương trình...</option>
+                <option value="mentoring">Mentoring 1:1</option>
+                <option value="career">Career Development</option>
+                <option value="leadership">Leadership Program</option>
+                <option value="workshop">Workshop / Sự kiện</option>
+                <option value="partnership">Hợp tác doanh nghiệp</option>
+                <option value="other">Khác</option>
+              </select>
+              <div class="form-error-msg" id="interestErr">Vui lòng chọn chương trình.</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Mục tiêu &amp; kỳ vọng của bạn <span class="req">*</span></label>
+              <textarea id="message" class="form-textarea" placeholder="Bạn muốn phát triển điều gì? Mục tiêu nghề nghiệp trong 1-2 năm tới?" required></textarea>
+              <div class="form-error-msg" id="messageErr">Vui lòng chia sẻ mục tiêu (≥10 ký tự).</div>
+            </div>
+            <div class="form-group" style="display:flex;align-items:flex-start;gap:10px">
+              <input type="checkbox" id="consent" style="width:16px;height:16px;margin-top:3px;accent-color:var(--orange);flex-shrink:0;cursor:pointer" required/>
+              <label for="consent" style="font-size:13px;color:var(--text-muted);cursor:pointer;line-height:1.6">
+                Tôi đồng ý nhận thông tin từ Smentor và chấp nhận <a href="#" style="color:var(--orange);text-decoration:underline">Chính sách bảo mật</a>.
+              </label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg form-submit" id="contactSubmitBtn">
+              <span id="submitBtnText">Gửi đăng ký ngay</span>
+              <svg id="submitBtnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <div class="form-privacy-note">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Thông tin của bạn được bảo mật tuyệt đối. Không spam.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  /* ====================================================
-     9. FORM — animated submit feedback
-  ==================================================== */
-  const form = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('formSubmitBtn');
+<!-- ================================================================ FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer__grid reveal reveal--up">
+      <div>
+        <div class="footer__logo"><div class="footer__logo-icon">S</div><span>smentor</span></div>
+        <p class="footer__desc">Smentor là tổ chức xã hội hoạt động với mục tiêu xây dựng hệ sinh thái mentoring kết nối người trẻ với các chuyên gia và doanh nhân.</p>
+        <div class="footer__social">
+          <a href="#" class="footer__s-btn" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="footer__s-btn" aria-label="LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="footer__s-btn" aria-label="YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0d0c18"/></svg></a>
+          <a href="#" class="footer__s-btn" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+          <a href="#" class="footer__s-btn" aria-label="TikTok"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Về chúng tôi</div>
+        <ul class="footer__links">
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#about">Tầm nhìn – Sứ mệnh</a></li>
+          <li><a href="#values">Giá trị cốt lõi</a></li>
+          <li><a href="#team">Đội ngũ</a></li>
+          <li><a href="#contact">Tuyển dụng</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Chương trình</div>
+        <ul class="footer__links">
+          <li><a href="#programs">Mentoring 1:1</a></li>
+          <li><a href="#programs">Career Development</a></li>
+          <li><a href="#programs">Leadership Program</a></li>
+          <li><a href="#">Workshop &amp; Sự kiện</a></li>
+          <li><a href="#">Dự án cộng đồng</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Tài nguyên</div>
+        <ul class="footer__links">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Tài liệu</a></li>
+          <li><a href="#">Câu chuyện thành công</a></li>
+          <li><a href="#">Podcast</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Liên hệ</div>
+        <div class="footer__contact-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          contact@smentor.org
+        </div>
+        <div class="footer__contact-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (+84) 123 456 789
+        </div>
+        <div class="footer__contact-row">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          TP. Hồ Chí Minh, Việt Nam
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copy">© 2025 Smentor. All rights reserved.</div>
+      <div class="footer__legal">
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Điều khoản sử dụng</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  if (form && submitBtn) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      // Validate
-      const inputs = form.querySelectorAll('[required]');
-      let valid = true;
-      inputs.forEach(inp => {
-        if (!inp.value.trim()) {
-          valid = false;
-          inp.style.borderColor = '#ef4444';
-          inp.addEventListener('input', () => inp.style.borderColor = '', { once: true });
-        }
-      });
-      if (!valid) return;
+<!-- Toast -->
+<div class="toast" id="toastMsg" role="alert" aria-live="polite"></div>
 
-      // Loading state
-      submitBtn.textContent = '⏳ Đang gửi...';
-      submitBtn.disabled = true;
-      submitBtn.style.opacity = '0.7';
+<!-- Back to top -->
+<button id="backTop" aria-label="Về đầu trang">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
 
-      // Simulate API call
-      setTimeout(() => {
-        submitBtn.innerHTML = '✅ Đã gửi thành công!';
-        submitBtn.style.background = '#10b981';
-        submitBtn.style.opacity = '1';
-        form.reset();
-
-        // Show success toast
-        showToast('🎉 Cảm ơn! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
-
-        setTimeout(() => {
-          submitBtn.innerHTML = 'Gửi yêu cầu tư vấn miễn phí <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
-          submitBtn.style.background = '';
-          submitBtn.disabled = false;
-        }, 3000);
-      }, 1600);
-    });
-
-    // Real-time validation colour
-    form.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(inp => {
-      inp.addEventListener('focus', () => {
-        inp.parentElement.querySelector('.form-label')
-          && (inp.parentElement.querySelector('.form-label').style.color = 'var(--purple)');
-      });
-      inp.addEventListener('blur', () => {
-        inp.parentElement.querySelector('.form-label')
-          && (inp.parentElement.querySelector('.form-label').style.color = '');
-      });
-    });
-  }
-
-  /* ====================================================
-     10. TOAST NOTIFICATION
-  ==================================================== */
-  function showToast (msg) {
-    const t = document.createElement('div');
-    t.textContent = msg;
-    t.style.cssText = `
-      position:fixed; bottom:88px; right:28px; z-index:9999;
-      background:#1a1a2e; color:#fff; font-size:13px; font-weight:600;
-      padding:14px 22px; border-radius:12px;
-      box-shadow:0 8px 32px rgba(0,0,0,0.25);
-      transform:translateY(20px); opacity:0;
-      transition:all 0.3s ease; max-width:320px; line-height:1.5;
-      border-left:4px solid #10b981;
-    `;
-    document.body.appendChild(t);
-    requestAnimationFrame(() => {
-      t.style.opacity = '1'; t.style.transform = 'none';
-    });
-    setTimeout(() => {
-      t.style.opacity = '0'; t.style.transform = 'translateY(10px)';
-      setTimeout(() => t.remove(), 320);
-    }, 4000);
-  }
-
-  /* ====================================================
-     11. PROCESS STEPS — sequential reveal
-  ==================================================== */
-  const processSteps = document.querySelectorAll('.process-step');
-  const processObs = new IntersectionObserver(entries => {
-    if (entries.some(e => e.isIntersecting)) {
-      processSteps.forEach((step, i) => {
-        setTimeout(() => step.classList.add('visible'), i * 120);
-      });
-      processObs.disconnect();
-    }
-  }, { threshold: 0.2 });
-  if (processSteps.length) processObs.observe(processSteps[0]);
-
-  /* ====================================================
-     12. BRANDS TRACK — pause on hover handled by CSS
-        Extra: duplicate track if needed for seamless loop
-  ==================================================== */
-  const track = document.getElementById('brandsTrack');
-  if (track) {
-    // Already duplicated in HTML; nothing extra needed.
-  }
-
-  /* ====================================================
-     13. PRICING — hover highlight
-  ==================================================== */
-  document.querySelectorAll('.pricing-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      document.querySelectorAll('.pricing-card').forEach(c => {
-        if (c !== card && !c.classList.contains('featured')) c.style.opacity = '0.65';
-      });
-    });
-    card.addEventListener('mouseleave', () => {
-      document.querySelectorAll('.pricing-card').forEach(c => c.style.opacity = '');
-    });
-  });
-
-  /* ====================================================
-     14. HERO — number ticker for stat cards
-  ==================================================== */
-  const heroStats = document.querySelectorAll('.sc-val[data-to]');
-  heroStats.forEach(el => {
-    const target = parseFloat(el.dataset.to);
-    const suffix = el.dataset.suffix || '';
-    const dur = 2000;
-    const start = performance.now();
-    const ease = t => 1 - Math.pow(1 - t, 3);
-    const tick = now => {
-      const p = Math.min((now - start) / dur, 1);
-      el.textContent = Math.round(ease(p) * target) + suffix;
-      if (p < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  });
-
-  /* ====================================================
-     15. INJECT ripple CSS once
-  ==================================================== */
-  const rippleStyle = document.createElement('style');
-  rippleStyle.textContent = `
-    @keyframes rippleAnim {
-      to { transform: scale(2.5); opacity: 0; }
-    }
-    .process-step { opacity:0; transform:translateY(24px); transition:opacity .5s ease,transform .5s ease; }
-    .process-step.visible { opacity:1; transform:none; }
-  `;
-  document.head.appendChild(rippleStyle);
-
-  console.log('✅ 1000GenZer — All systems go 🚀');
-
-})();
+<script src="main.js"></script>
+</body>
+</html>
