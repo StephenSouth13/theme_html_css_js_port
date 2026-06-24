@@ -1,0 +1,16 @@
+# Thư mục chứa các file vendor/template (dựa theo tên trong ảnh)
+Template Forest/
+
+# Thư mục dependencies phổ biến (nếu có)
+node_modules/
+dist/
+build/
+
+# Các file hệ thống và file tạm
+.DS_Store
+*.log
+*.map
+.env
+.next/
+.out/
+*.js
