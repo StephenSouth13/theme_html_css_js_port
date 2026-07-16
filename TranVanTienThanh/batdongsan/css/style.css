@@ -1777,14 +1777,16 @@ footer {
 }
 
 /* Logo */
-.logo{
+.service-network .logo{
     position:absolute;
     max-width:180px;
-    transition:.3s;
+    transition: transform .3s ease, filter .3s ease;
+    filter: grayscale(100%);
 }
 
-.logo:hover{
+.service-network .logo:hover{
     transform:scale(1.08);
+    filter:none;
 }
 
 /* Bên trái */
@@ -1822,16 +1824,11 @@ footer {
     line-height:1.6;
 }
 
-.logo{
+.service-network .logo{
     cursor:pointer;
-    transition:.3s;
 }
 
-.logo:hover{
-    transform:scale(1.08);
-}
-
-.logo.active{
+.service-network .logo.active{
     transform:scale(1.1);
 }
 .ability-tabs{
@@ -1926,7 +1923,7 @@ footer {
     object-fit:contain;
     transition:.35s;
     cursor:pointer;
-    filter: grayscale(10%);
+    filter: grayscale(100%);
 }
 
 .sale-logo:hover{
@@ -2318,8 +2315,8 @@ footer {
 
 .partnerSwiper .swiper-slide-active img,
 .partnerSwiper .swiper-slide-next img {
-    filter: grayscale(0);
-    opacity: 1;
+    filter: grayscale(100%);
+    opacity: .7;
 }
 
 .partnerSwiper .swiper-slide img:hover {
