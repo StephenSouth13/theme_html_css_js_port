@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Truong Minh Khue Portfolio - Componentized Architecture">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg">
+    <title>Truong Minh Khue | Personal Portfolio</title>
+    <!-- Bootstrap min css -->
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.css">
+    <link rel="stylesheet" href="assets/css/plugins/odometer.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="about inner">
+
+    <div class="site-shell">
+        <!-- =============== HEADER & NAVIGATION =============== -->
+        <div data-component="header"></div>
+        <div data-component="sidebar"></div>
+        <div data-component="mobile_menu"></div>
+
+        <!-- =============== MAIN CONTENT =============== -->
+        <main>
+            <div data-component="breadcrumb"></div>
+            <div data-component="service"></div>
+            <div data-component="skill"></div>
+            <div data-component="counter"></div>
+            <div data-component="education"></div>
+            <div data-component="price_plan"></div>
+            <div data-component="get_in_touch"></div>
+        </main>
+        
+        <!-- =============== FOOTER =============== -->
+        <div data-component="footer"></div>
+    </div>
+
+    <!-- bootstrap Js-->
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/jquery.js"></script>
+    <!-- custom Js -->
+    <script src="main.js"></script>
+</body>
+</html>
