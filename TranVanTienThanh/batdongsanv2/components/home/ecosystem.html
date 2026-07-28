@@ -1,0 +1,45 @@
+<section class="profile-section section-padding" id="profile">
+    <div class="container profile-container">
+        <h2 class="section-title">Hồ sơ năng lực</h2>
+        <p class="section-desc">Để Quý khách hàng, Quý đối tác hiểu rõ hơn về công ty, Smartland xin phép gửi gắm toàn bộ thông tin vào cuốn hồ sơ năng lực này. Từng trang của cuốn sách đều là những tâm huyết của Ban lãnh đạo và toàn thể nhân viên về dịch vụ cũng như giá trị cốt lõi mà công ty muốn mang lại.</p>
+        <!-- Flipbook toolbar -->
+        <div class="flipbook-toolbar">
+            <div class="toolbar-left">
+                <span class="page-indicator">Trang <span id="current-page">0</span> / <span id="total-pages">0</span></span>
+            </div>
+            <div class="toolbar-center">
+                <button id="btn-prev" class="toolbar-btn" aria-label="Trang trước"><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="btn-next" class="toolbar-btn" aria-label="Trang sau"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="toolbar-right">
+                <button id="btn-zoom-out" class="toolbar-btn" aria-label="Thu nhỏ"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                <button id="btn-zoom-in" class="toolbar-btn" aria-label="Phóng to"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                <button id="btn-fullscreen" class="toolbar-btn" aria-label="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
+            </div>
+        </div>
+
+        <!-- Flipbook viewport -->
+        <div class="flipbook-viewport" id="flipbook-viewport">
+            <button id="btn-viewport-prev" class="viewport-nav-btn prev" aria-label="Trang trước">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <div class="flipbook-zoom-container" id="flipbook-zoom-container">
+                <div id="flipbook" class="st-page-flip">
+                    <div class="loading-overlay">
+                        <div class="spinner-border text-danger" role="status"></div>
+                        <span class="ms-3 text-muted">Đang tải hồ sơ năng lực 3D...</span>
+                    </div>
+                </div>
+            </div>
+
+            <button id="btn-viewport-next" class="viewport-nav-btn next" aria-label="Trang sau">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="profile-actions mt-4">
+            <a class="btn btn-primary-custom btn-small" href="{{ROOT}}img/1-VN-HO-SO-NANG-LUC-SML_SMR_18122025.pdf" download>Download profile VN</a>
+        </div>
+    </div>
+</section>
