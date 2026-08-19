@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tin tức bất động sản mới nhất từ Smartland">
+    <meta name="description" content="Cập nhật tin tức bất động sản mới nhất, phân tích thị trường, thông tin dự án từ Smartland.">
     <title>Tin tức - Smartland</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../../img/logo2024.png">
+    <link rel="shortcut icon" type="image/png" href="../../img/logo2024.png">
+    <link rel="apple-touch-icon" href="../../img/logo2024.png">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Smartland">
+    <meta property="og:title" content="Tin tức Bất Động Sản - Smartland">
+    <meta property="og:description" content="Cập nhật tin tức bất động sản mới nhất, phân tích thị trường từ Smartland.">
+    <meta property="og:image" content="../../img/hero.webp">
+    <meta property="og:url" content="index.html">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tin tức Bất Động Sản - Smartland">
+    <meta name="twitter:description" content="Cập nhật tin tức bất động sản mới nhất, phân tích thị trường từ Smartland.">
+    <meta name="twitter:image" content="../../img/hero.webp">
+
+    <!-- Fonts & CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,34 +35,324 @@
 </head>
 <body>
     <!-- Shared Header -->
-    <div data-component="header" data-src="../../shared/header.html"></div>
+    <header class="site-header" data-block="header">
+        <nav class="navbar navbar-expand-lg navbar-light" data-block="nav">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html" aria-label="Smartland">
+                    <img src="../../img/logo2024.png" alt="Smartland logo">
+                </a>
+                <button class="navbar-toggler hamburger mobile-menu-toggle btn-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation" data-hamburger="true">
+                    <span class="navbar-toggler-icon hamburger-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html" data-nav-page="home">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#about" data-nav-page="gioi-thieu">Giới thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../pages/giai-thuong/" data-nav-page="giai-thuong">Giải thưởng</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../pages/du-an/" data-nav-page="du-an">Dự án</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="../../pages/tin-tuc/" data-nav-page="tin-tuc">Tin tức</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#career" data-nav-page="tuyen-dung">Tuyển dụng</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../../index.html#contact" data-nav-page="lien-he">Liên hệ</a></li>
+                        <li class="nav-item">
+                            <a class="language-link" href="#" aria-label="English">
+                                <span>🇬🇧</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main class="news-page-main">
         <!-- Hero Carousel Slider -->
-        <div data-component="tin-tuc-hero" data-src="./components/hero.html"></div>
+        <section class="news-slider-section" aria-label="Tin nổi bật">
+            <div class="container news-page-container">
+                <div id="newsHeroSlider" class="carousel slide carousel-fade news-hero-carousel" data-bs-ride="carousel" data-bs-interval="4500" data-bs-pause="hover">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#newsHeroSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#newsHeroSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#newsHeroSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <article class="carousel-item active">
+                            <img src="../../img/banner-sola-.jpg" class="d-block w-100" alt="Sống giữa ba mặt sông hiếm có">
+                            <div class="news-slide-overlay"></div>
+                            <div class="carousel-caption news-slide-content">
+                                <span class="news-slide-category">Dự án nổi bật</span>
+                                <h1>Sống giữa 3 mặt sông hiếm có</h1>
+                                <p>Cập nhật thông tin dự án, thị trường và các cơ hội đầu tư nổi bật từ Smartland.</p>
+                                <a class="btn btn-primary-custom btn-small" href="#latestNews">Xem thêm</a>
+                            </div>
+                        </article>
+                        <article class="carousel-item">
+                            <img src="../../img/banner-haus-dalat.png" class="d-block w-100" alt="Bất động sản nghỉ dưỡng">
+                            <div class="news-slide-overlay"></div>
+                            <div class="carousel-caption news-slide-content">
+                                <span class="news-slide-category">Thị trường</span>
+                                <h1>Không gian sống xanh và giá trị bền vững</h1>
+                                <p>Những xu hướng được khách hàng quan tâm trong phân khúc đô thị và nghỉ dưỡng.</p>
+                                <a class="btn btn-primary-custom btn-small" href="#latestNews">Xem thêm</a>
+                            </div>
+                        </article>
+                        <article class="carousel-item">
+                            <img src="../../img/du-an-do-thi.jpg" class="d-block w-100" alt="Tin thị trường bất động sản">
+                            <div class="news-slide-overlay"></div>
+                            <div class="carousel-caption news-slide-content">
+                                <span class="news-slide-category">Tin Smartland</span>
+                                <h1>Các bài viết mới nhất về bất động sản</h1>
+                                <p>Thông tin được chọn lọc giúp khách hàng cập nhật thị trường nhanh chóng.</p>
+                                <a class="btn btn-primary-custom btn-small" href="#latestNews">Xem thêm</a>
+                            </div>
+                        </article>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsHeroSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Trước</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsHeroSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Sau</span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
         <!-- Breadcrumb -->
-        <div data-component="tin-tuc-breadcrumb" data-src="./components/featured-news.html"></div>
+        <div class="news-breadcrumb" aria-label="breadcrumb" role="navigation">
+            <div class="container news-page-container">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../../index.html">Trang chủ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tin tức</li>
+                </ol>
+            </div>
+        </div>
 
         <!-- News Content: List + Sidebar -->
         <section class="latest-news-section" id="latestNews">
             <div class="container news-page-container">
                 <div class="row g-5">
                     <!-- News List -->
-                    <div data-component="tin-tuc-news-list" data-src="./components/news-list.html"></div>
+                    <div class="col-lg-8">
+                        <h2 class="news-page-title">Các bài viết mới nhất</h2>
+                        <div class="row g-4 news-list-grid">
+                            <div class="col-md-6">
+                                <article class="news-list-card">
+                                    <a class="news-list-image" href="#">
+                                        <img src="../../img/du-an-do-thi.jpg" alt="Siêu đô thị biển Blanca City Vũng Tàu">
+                                    </a>
+                                    <div class="news-list-content">
+                                        <div class="news-meta">
+                                            <span>Thị trường</span>
+                                            <time datetime="2026-07-21">21/07/2026</time>
+                                        </div>
+                                        <h3>SIÊU ĐÔ THỊ BIỂN BLANCA CITY VŨNG TÀU [TẤT TẦN TẬT THÔNG TIN]</h3>
+                                        <p>Blanca City Vũng Tàu là siêu đô thị biển mới nhất do Sun Group kiến tạo tại cun...</p>
+                                        <a class="news-read-more" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6">
+                                <article class="news-list-card">
+                                    <a class="news-list-image" href="#">
+                                        <img src="../../img/hero.webp" alt="Căn hộ Gladia Khang Điền">
+                                    </a>
+                                    <div class="news-list-content">
+                                        <div class="news-meta">
+                                            <span>Dự án</span>
+                                            <time datetime="2026-07-21">21/07/2026</time>
+                                        </div>
+                                        <h3>Căn hộ Gladia Khang Điền: 8 loại căn, diện tích, giá dự kiến &amp; cách chọn tháp (2026)</h3>
+                                        <p>Căn hộ Gladia Khang Điền (phân khu cao tầng Gladia Heights) có 8 dòng sả...</p>
+                                        <a class="news-read-more" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6">
+                                <article class="news-list-card">
+                                    <a class="news-list-image" href="#">
+                                        <img src="../../img/banner-1.jpg" alt="Thuế bất động sản">
+                                    </a>
+                                    <div class="news-list-content">
+                                        <div class="news-meta">
+                                            <span>Pháp lý</span>
+                                            <time datetime="2026-07-21">21/07/2026</time>
+                                        </div>
+                                        <h3>Thuế bất động sản gồm những gì? Cập nhật quy định và đề xuất mới nhất năm 2026</h3>
+                                        <p>Thuế bất động sản luôn là chủ đề được nhà đầu tư và người sở hữu nhiều tài sả...</p>
+                                        <a class="news-read-more" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6">
+                                <article class="news-list-card">
+                                    <a class="news-list-image" href="#">
+                                        <img src="../../img/biet-thu-Melia-Ho-Tram-2.jpeg" alt="Lãi suất vay mua nhà">
+                                    </a>
+                                    <div class="news-list-content">
+                                        <div class="news-meta">
+                                            <span>Tài chính</span>
+                                            <time datetime="2026-07-21">21/07/2026</time>
+                                        </div>
+                                        <h3>Lãi suất vay mua nhà 2026 – Người mua nhà cần lưu ý gì trước khi xuống tiền?</h3>
+                                        <p>Trong bối cảnh thị trường bất động sản từng bước phục hồi, lãi suất vay mua...</p>
+                                        <a class="news-read-more" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6">
+                                <article class="news-list-card">
+                                    <a class="news-list-image" href="#">
+                                        <img src="../../img/partner-mobile-2025.jpg" alt="Bảng giá đất TPHCM 2026">
+                                    </a>
+                                    <div class="news-list-content">
+                                        <div class="news-meta">
+                                            <span>Quy hoạch</span>
+                                            <time datetime="2026-07-21">21/07/2026</time>
+                                        </div>
+                                        <h3>Bảng giá đất TPHCM 2026: Giá các trục đường chính thay đổi ra sao?</h3>
+                                        <p>Bảng giá đất TPHCM 2026 chính thức được áp dụng từ ngày 1/1/2026 trên toà...</p>
+                                        <a class="news-read-more" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-md-6">
+                                <article class="news-list-card">
+                                    <a class="news-list-image" href="#">
+                                        <img src="../../img/tong-the-F1-2-view4.jpg" alt="Giá nhà đất TPHCM 2026">
+                                    </a>
+                                    <div class="news-list-content">
+                                        <div class="news-meta">
+                                            <span>Phân tích</span>
+                                            <time datetime="2026-07-21">21/07/2026</time>
+                                        </div>
+                                        <h3>Giá nhà đất TP.HCM 2026: Mặt bằng giá sau sáp nhập biến động ra sao?</h3>
+                                        <p>Sau khi TP.HCM chính thức mở rộng địa giới hành chính từ ngày 1/7/2025, thi...</p>
+                                        <a class="news-read-more" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="news-pagination">
+                            <a class="active" href="#" aria-label="Trang 1">1</a>
+                            <a href="#" aria-label="Trang 2">2</a>
+                            <a href="#" aria-label="Trang sau"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
 
                     <!-- Sidebar -->
-                    <div data-component="tin-tuc-sidebar" data-src="./components/sidebar.html"></div>
+                    <aside class="col-lg-4 news-sidebar">
+                        <section class="news-sidebar-widget">
+                            <h2>Tìm kiếm bài viết</h2>
+                            <form id="sidebar-search-form" class="news-sidebar-search" action="#" method="get">
+                                <label class="visually-hidden" for="newsSearch">Tìm kiếm bài viết</label>
+                                <input id="newsSearch" type="search" name="newsSearch" placeholder="Nhập bài viết bạn cần tìm">
+                                <button type="submit" aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </section>
+
+                        <section class="news-sidebar-widget">
+                            <h2>Bài viết gần đây</h2>
+                            <div class="recent-post-list">
+                                <article class="recent-post">
+                                    <img src="../../img/du-an-do-thi.jpg" alt="Blanca City Vũng Tàu">
+                                    <h3><a href="#">SIÊU ĐÔ THỊ BIỂN BLANCA CITY VŨNG TÀU [TẤT TẦN TẬT THÔNG TIN]</a></h3>
+                                </article>
+                                <article class="recent-post">
+                                    <img src="../../img/hero.webp" alt="Căn hộ Gladia Khang Điền">
+                                    <h3><a href="#">Căn hộ Gladia Khang Điền: 8 loại căn, diện tích, giá dự kiến &amp; cách chọn tháp (2026)</a></h3>
+                                </article>
+                                <article class="recent-post">
+                                    <img src="../../img/banner-1.jpg" alt="Thuế bất động sản">
+                                    <h3><a href="#">Thuế bất động sản gồm những gì? Cập nhật quy định và đề xuất mới nhất năm 2026</a></h3>
+                                </article>
+                                <article class="recent-post">
+                                    <img src="../../img/biet-thu-Melia-Ho-Tram-2.jpeg" alt="Lãi suất vay mua nhà">
+                                    <h3><a href="#">Lãi suất vay mua nhà 2026 – Người mua nhà cần lưu ý gì trước khi xuống tiền?</a></h3>
+                                </article>
+                                <article class="recent-post">
+                                    <img src="../../img/partner-mobile-2025.jpg" alt="Bảng giá đất">
+                                    <h3><a href="#">Bảng giá đất TPHCM 2026: Giá các trục đường chính thay đổi ra sao?</a></h3>
+                                </article>
+                            </div>
+                        </section>
+
+                        <section class="news-sidebar-widget">
+                            <h2>Chuyên mục</h2>
+                            <ul class="news-category-list">
+                                <li><a href="#">Tin thị trường</a></li>
+                                <li><a href="#">Dự án mới</a></li>
+                                <li><a href="#">Pháp lý bất động sản</a></li>
+                                <li><a href="#">Tài chính - đầu tư</a></li>
+                            </ul>
+                        </section>
+
+                        <section class="newsletter-section">
+                            <h2>Nhận tin mới</h2>
+                            <p>Đăng ký để cập nhật các bài viết và thông tin dự án mới nhất từ Smartland.</p>
+                            <form id="sidebar-subscribe-form" class="sidebar-subscribe-form" action="#" method="post">
+                                <label class="visually-hidden" for="newsletterEmail">Email</label>
+                                <input id="newsletterEmail" type="email" name="email" placeholder="Email của bạn">
+                                <button class="btn btn-primary-custom btn-small" type="submit">Đăng ký</button>
+                            </form>
+                        </section>
+                    </aside>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Shared Footer -->
-    <div data-component="footer" data-src="../../shared/footer.html"></div>
+    <footer class="site-footer" id="contact" data-block="footer">
+        <div class="container narrow-container">
+            <div class="row gy-5">
+                <div class="col-lg-7">
+                    <div class="footer-contact">
+                        <h3>Địa chỉ trụ sở chính:</h3>
+                        <p>L17-11 Tầng 17, Tòa nhà Vincom Center, Số 72 Lê Thánh Tôn, Phường Sài Gòn, Thành phố Hồ Chí Minh</p>
+
+                        <h3>Địa chỉ văn phòng giao dịch:</h3>
+                        <p>Tầng 2, Tòa Nhà Đại Dũng, 92 Đường Nguyễn Hữu Cảnh, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh</p>
+
+                        <p class="contact-line"><strong>Hotline:</strong> 0916 25 78 25 - <strong>Email:</strong> lienhe@smartland.vn</p>
+
+                        <div class="social-links" aria-label="Mạng xã hội">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+                            <a href="#" aria-label="Zalo">Zalo</a>
+                        </div>
+
+                        <ul class="footer-notes">
+                            <li>A MEMBER OF SMARTLAND GROUP</li>
+                            <li>Website thuộc sở hữu bởi: CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</li>
+                            <li>Bản quyền ©2025 thuộc về Công ty TNHH Bất Động Sản Smartland</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <form id="footer-subscribe-form" class="subscribe-form" action="#" method="post">
+                        <h3>Đăng ký nhận thêm thông tin</h3>
+                        <label class="visually-hidden" for="footerFullName">Họ tên</label>
+                        <input id="footerFullName" type="text" name="fullName" placeholder="Nhập họ tên của bạn">
+                        <label class="visually-hidden" for="footerPhoneNumber">Số điện thoại</label>
+                        <input id="footerPhoneNumber" type="tel" name="phoneNumber" placeholder="Nhập số điện thoại của bạn">
+                        <button class="btn btn-primary-custom btn-small" type="submit">Đăng ký</button>
+                    </form>
+                    <div class="footer-policy">
+                        <a href="#">CHÍNH SÁCH BẢO MẬT</a>
+                        <span class="certification">ĐÃ THÔNG BÁO<br>BỘ CÔNG THƯƠNG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Back To Top -->
-    <div data-component="backtotop" data-src="../../shared/backtotop.html"></div>
+    <button class="back-to-top" type="button" aria-label="Về đầu trang">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>window.ROOT_PATH = '../../';</script>

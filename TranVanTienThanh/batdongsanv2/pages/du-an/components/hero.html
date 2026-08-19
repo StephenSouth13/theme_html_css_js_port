@@ -1,7 +1,46 @@
-<section class="project-banner" aria-labelledby="projectSearchTitle">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tìm kiếm dự án bất động sản Smartland - Lọc theo loại hình BĐS đô thị, nghỉ dưỡng, khu vực Hồ Chí Minh, Hà Nội, Đà Nẵng, Vũng Tàu, Phú Quốc và tình trạng xây dựng.">
+    <title>Tìm dự án - Smartland</title>
+    <link rel="icon" type="image/png" href="{{ROOT}}img/logo2024.png">
+    <link rel="shortcut icon" type="image/png" href="{{ROOT}}img/logo2024.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Smartland">
+    <meta property="og:title" content="Tìm kiếm dự án bất động sản - Smartland">
+    <meta property="og:description" content="Lọc dự án BĐS theo loại hình, khu vực và tình trạng xây dựng tại Smartland.">
+    <meta property="og:image" content="{{ROOT}}img/hero.webp">
+    <meta property="og:url" content="{{ROOT}}pages/du-an/">
+</head>
+<header class="site-header" data-block="header">
+    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Main navigation" data-block="nav">
+        <div class="container">
+            <a class="navbar-brand" href="{{ROOT}}index.html" aria-label="Smartland">
+                <img src="{{ROOT}}img/logo2024.png" alt="Smartland logo">
+            </a>
+            <button class="navbar-toggler hamburger mobile-menu-toggle btn-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation" data-hamburger="true">
+                <span class="navbar-toggler-icon hamburger-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}index.html" data-nav-page="home">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}index.html#about" data-nav-page="gioi-thieu">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}pages/giai-thuong/" data-nav-page="giai-thuong">Giải thưởng</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ROOT}}pages/du-an/" data-nav-page="du-an">Dự án</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}pages/tin-tuc/" data-nav-page="tin-tuc">Tin tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}index.html#career" data-nav-page="tuyen-dung">Tuyển dụng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}index.html#contact" data-nav-page="lien-he">Liên hệ</a></li>
+                    <li class="nav-item">
+                        <a class="language-link" href="#" aria-label="English"><span>🇬🇧</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="project-banner" aria-labelledby="projectSearchTitle" data-beautyos-section="hero" data-block="project-search">
     <div class="project-banner-overlay"></div>
     <div class="container">
-        <form class="project-search-panel" action="#" method="get">
+        <form id="project-search-form" class="project-search-panel" action="#" method="get">
             <div class="project-search-top">
                 <h1 id="projectSearchTitle">Tìm Dự Án</h1>
                 <div class="project-search-input">

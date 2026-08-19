@@ -1,7 +1,47 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sidebar tin tức Smartland - Tìm kiếm bài viết, danh mục và các bài viết gần đây về thị trường bất động sản.">
+    <title>Sidebar Tin tức - Smartland</title>
+    <link rel="icon" type="image/png" href="{{ROOT}}img/logo2024.png">
+    <link rel="shortcut icon" type="image/png" href="{{ROOT}}img/logo2024.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Smartland">
+    <meta property="og:title" content="Tin tức Bất Động Sản - Smartland">
+    <meta property="og:description" content="Tìm kiếm và khám phá tin tức bất động sản từ Smartland.">
+    <meta property="og:image" content="{{ROOT}}img/hero.webp">
+    <meta property="og:url" content="{{ROOT}}pages/tin-tuc/">
+</head>
+<header class="site-header" data-block="header">
+    <nav class="navbar navbar-expand-lg navbar-light" aria-label="Main navigation" data-block="nav">
+        <div class="container">
+            <a class="navbar-brand" href="{{ROOT}}index.html" aria-label="Smartland">
+                <img src="{{ROOT}}img/logo2024.png" alt="Smartland logo">
+            </a>
+            <button class="navbar-toggler hamburger mobile-menu-toggle btn-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation" data-hamburger="true">
+                <span class="navbar-toggler-icon hamburger-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}index.html" data-nav-page="home">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}index.html#about" data-nav-page="gioi-thieu">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}pages/giai-thuong/" data-nav-page="giai-thuong">Giải thưởng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}pages/du-an/" data-nav-page="du-an">Dự án</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ROOT}}pages/tin-tuc/" data-nav-page="tin-tuc">Tin tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}index.html#career" data-nav-page="tuyen-dung">Tuyển dụng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ROOT}}index.html#contact" data-nav-page="lien-he">Liên hệ</a></li>
+                    <li class="nav-item">
+                        <a class="language-link" href="#" aria-label="English"><span>🇬🇧</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section data-beautyos-section="sidebar" data-block="sidebar">
 <aside class="col-lg-4 news-sidebar">
     <section class="news-sidebar-widget">
         <h2>Tìm kiếm bài viết</h2>
-        <form class="news-sidebar-search" action="#" method="get">
+        <form id="sidebar-search-form" class="news-sidebar-search" action="#" method="get">
             <label class="visually-hidden" for="newsSearch">Tìm kiếm bài viết</label>
             <input id="newsSearch" type="search" name="newsSearch" placeholder="Nhập bài viết bạn cần tìm">
             <button type="submit" aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -47,7 +87,7 @@
     <section class="newsletter-section">
         <h2>Nhận tin mới</h2>
         <p>Đăng ký để cập nhật các bài viết và thông tin dự án mới nhất từ Smartland.</p>
-        <form action="#" method="post">
+        <form id="sidebar-subscribe-form" class="sidebar-subscribe-form" action="#" method="post">
             <label class="visually-hidden" for="newsletterEmail">Email</label>
             <input id="newsletterEmail" type="email" name="email" placeholder="Email của bạn">
             <button class="btn btn-primary-custom btn-small" type="submit">Đăng ký</button>

@@ -3,8 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Smartland - Công ty TNHH Bất động sản Smartland">
+    <meta name="description" content="Smartland - Công ty TNHH Bất động sản Smartland. Chuyên phân phối các dự án bất động sản cao cấp, biệt thự, căn hộ và khu đô thị.">
     <title>Smartland - Công Ty TNHH Bất Động Sản Smartland</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo2024.png">
+    <link rel="shortcut icon" type="image/png" href="img/logo2024.png">
+    <link rel="apple-touch-icon" href="img/logo2024.png">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Smartland">
+    <meta property="og:title" content="Smartland - Công Ty TNHH Bất Động Sản Smartland">
+    <meta property="og:description" content="Chuyên phân phối các dự án bất động sản cao cấp, biệt thự, căn hộ và khu đô thị.">
+    <meta property="og:image" content="img/hero.webp">
+    <meta property="og:url" content="index.html">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smartland - Công Ty TNHH Bất Động Sản Smartland">
+    <meta name="twitter:description" content="Chuyên phân phối các dự án bất động sản cao cấp, biệt thự, căn hộ và khu đô thị.">
+    <meta name="twitter:image" content="img/hero.webp">
+
+    <!-- Fonts & CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,26 +40,401 @@
 </head>
 <body>
     <!-- Shared Header -->
-    <div data-component="header" data-src="shared/header.html"></div>
+    <header class="site-header" data-block="header">
+        <nav class="navbar navbar-expand-lg navbar-light" data-block="nav">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="Smartland">
+                    <img src="img/logo2024.png" alt="Smartland logo">
+                </a>
+                <button class="navbar-toggler hamburger mobile-menu-toggle btn-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation" data-hamburger="true">
+                    <span class="navbar-toggler-icon hamburger-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link active" href="index.html" data-nav-page="home">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about" data-nav-page="gioi-thieu">Giới thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/giai-thuong/" data-nav-page="giai-thuong">Giải thưởng</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/du-an/" data-nav-page="du-an">Dự án</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pages/tin-tuc/" data-nav-page="tin-tuc">Tin tức</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#career" data-nav-page="tuyen-dung">Tuyển dụng</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact" data-nav-page="lien-he">Liên hệ</a></li>
+                        <li class="nav-item">
+                            <a class="language-link" href="#" aria-label="English">
+                                <span>🇬🇧</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <main>
-        <!-- Home Section Components -->
-        <div data-component="hero" data-src="components/home/hero.html"></div>
-        <div data-component="about" data-src="components/home/about.html"></div>
-        <div data-component="services" data-src="components/home/services.html"></div>
-        <div data-component="projects" data-src="components/home/projects.html"></div>
-        <div data-component="partners" data-src="components/home/partners.html"></div>
-        <div data-component="ecosystem" data-src="components/home/ecosystem.html"></div>
-        <div data-component="awards" data-src="components/home/awards.html"></div>
-        <div data-component="news" data-src="components/home/news.html"></div>
-        <div data-component="contact" data-src="components/home/contact.html"></div>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1>Tìm ngôi nhà tương lai của bạn</h1>
+                <form id="hero-search-form" class="search-box" action="#" method="get">
+                    <label class="visually-hidden" for="projectSearch">Tìm dự án</label>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input id="projectSearch" type="search" placeholder="Nhập dự án bạn cần tìm">
+                    <button class="btn btn-primary-custom" type="submit">Tìm kiếm</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section section-padding" id="about">
+            <div class="container">
+                <div class="section-heading text-center mx-auto">
+                    <span>Giới thiệu về</span>
+                    <h2>CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</h2>
+                    <p>21 năm hoạt động và phát triển là thời gian đủ dài để Smartland chứng minh được sự uy tín, năng lực và thương hiệu doanh nghiệp thông qua quá trình hoạt động kinh doanh mạnh mẽ. Hiện nay Smartland đang là cầu nối đắc lực của nhiều chủ đầu tư lớn như Masteri Homes, Vingroup, Kepple Land, Phú Long, Refico,... đưa những sản phẩm bất động sản có vị trí đẹp, chất lượng cao, pháp lý và giá bán tốt đến tay khách hàng.</p>
+                </div>
+                <div class="row g-4 stats-row">
+                    <div class="col-6 col-lg">
+                        <article class="stat-item">
+                            <i class="fa-regular fa-building"></i>
+                            <strong>21</strong>
+                            <span>Năm hoạt động</span>
+                        </article>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <article class="stat-item">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <strong>10000+</strong>
+                            <span>Sản phẩm bán ra</span>
+                        </article>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <article class="stat-item">
+                            <i class="fa-regular fa-handshake"></i>
+                            <strong>100+</strong>
+                            <span>Đối tác</span>
+                        </article>
+                    </div>
+                    <div class="col-6 col-lg">
+                        <article class="stat-item">
+                            <i class="fa-solid fa-users-gear"></i>
+                            <strong>3000+</strong>
+                            <span>Nhân viên</span>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg">
+                        <article class="stat-item">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <strong>300+</strong>
+                            <span>Dự án đã triển khai</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="category-section section-padding" id="services">
+            <div class="container narrow-container">
+                <h2 class="section-title">Hạng mục sản phẩm</h2>
+                <div class="row g-5">
+                    <div class="col-md-6">
+                        <article class="category-card">
+                            <a class="image-link" href="#">
+                                <img src="img/biet-thu-Melia-Ho-Tram-2.jpeg" alt="Dự án nghỉ dưỡng">
+                            </a>
+                            <h3>Dự án nghỉ dưỡng</h3>
+                            <p>Smartland giới thiệu tới khách hàng bộ sưu tập biệt thự biển đẳng cấp được bảo chứng bởi các thương hiệu hàng đầu quốc tế Marriott, Hyatt, Banyan Tree...</p>
+                            <a class="text-link" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="category-card">
+                            <a class="image-link" href="#">
+                                <img src="img/du-an-do-thi.jpg" alt="Dự án đô thị">
+                            </a>
+                            <h3>Dự án đô thị</h3>
+                            <p>Smartland lựa chọn phân phối các dự án có vị trí đẹp, pháp lý rõ ràng, tiện ích hấp dẫn cùng tiềm năng sinh lời lâu dài tại Thành phố Hồ Chí Minh</p>
+                            <a class="text-link" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="featured-section section-padding" id="projects">
+            <div class="container narrow-container">
+                <h2 class="section-title">Dự án nổi bật</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+                            <img src="img/duong-ven-song.webp" alt="Palm River">
+                            <div class="project-content">
+                                <h3>Palm River</h3>
+                                <p>PALM RIVER Sống Giữa Thiên Nhiên Kề Thủ Thiêm 640 căn hộ — 3 mặt...</p>
+                                <a class="text-link" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+                            <img src="img/hero.webp" alt="Gladia Heights">
+                            <div class="project-content">
+                                <h3>Gladia Heights</h3>
+                                <p>Phân khu căn hộ cao tầng đầu tiên thuộc khu đô thị Gladia by th...</p>
+                                <a class="text-link" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+                            <img src="img/tong-the-F1-2-view4.jpg" alt="Hồng Hạc City Phân Khu Hồng Phát">
+                            <div class="project-content">
+                                <h3>Hồng Hạc City Phân Khu Hồng Phát</h3>
+                                <p>Lấy cảm hứng từ vùng đất Kinh Bắc giàu di sản. Phân khu Hồng...</p>
+                                <a class="text-link" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a class="btn btn-primary-custom btn-small" href="pages/du-an/">Xem thêm</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners-section section-padding-sm" id="partners">
+            <div class="container narrow-container text-center">
+                <h2 class="section-title text-center">Đối tác của chúng tôi</h2>
+                <img class="partners-image" src="img/partner-mobile-2025.jpg" alt="Đối tác của Smartland">
+            </div>
+        </section>
+
+        <!-- Ecosystem Section -->
+        <section class="profile-section section-padding" id="profile">
+            <div class="container profile-container">
+                <h2 class="section-title">Hồ sơ năng lực</h2>
+                <p class="section-desc">Để Quý khách hàng, Quý đối tác hiểu rõ hơn về công ty, Smartland xin phép gửi gắm toàn bộ thông tin vào cuốn hồ sơ năng lực này. Từng trang của cuốn sách đều là những tâm huyết của Ban lãnh đạo và toàn thể nhân viên về dịch vụ cũng như giá trị cốt lõi mà công ty muốn mang lại.</p>
+                <!-- Flipbook toolbar -->
+                <div class="flipbook-toolbar">
+                    <div class="toolbar-left">
+                        <span class="page-indicator">Trang <span id="current-page">0</span> / <span id="total-pages">0</span></span>
+                    </div>
+                    <div class="toolbar-center">
+                        <button id="btn-prev" class="toolbar-btn" aria-label="Trang trước"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button id="btn-next" class="toolbar-btn" aria-label="Trang sau"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                    <div class="toolbar-right">
+                        <button id="btn-zoom-out" class="toolbar-btn" aria-label="Thu nhỏ"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+                        <button id="btn-zoom-in" class="toolbar-btn" aria-label="Phóng to"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+                        <button id="btn-fullscreen" class="toolbar-btn" aria-label="Toàn màn hình"><i class="fa-solid fa-expand"></i></button>
+                    </div>
+                </div>
+
+                <!-- Flipbook viewport -->
+                <div class="flipbook-viewport" id="flipbook-viewport">
+                    <button id="btn-viewport-prev" class="viewport-nav-btn prev" aria-label="Trang trước">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="flipbook-zoom-container" id="flipbook-zoom-container">
+                        <div id="flipbook" class="st-page-flip">
+                            <div class="loading-overlay">
+                                <div class="spinner-border text-danger" role="status"></div>
+                                <span class="ms-3 text-muted">Đang tải hồ sơ năng lực 3D...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="btn-viewport-next" class="viewport-nav-btn next" aria-label="Trang sau">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="profile-actions mt-4">
+                    <a class="btn btn-primary-custom btn-small" href="https://www.dropbox.com/scl/fi/4p3lsmod447uyizjdjf9w/1-VN-HO-SO-NANG-LUC-SML_SMR_18122025.pdf?rlkey=03eu1x1wm05av4yaei1nr9utu&st=p5srg6iw&dl=0" target="_blank" rel="noopener noreferrer">Download profile VN</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards Section -->
+        <section class="awards-section section-padding" id="awards">
+            <div class="container narrow-container">
+                <h2 class="section-title">Giải thưởng</h2>
+                <p class="section-desc">Thông qua kênh Smartland, hàng ngàn sản phẩm đã đến tay những chủ nhân xứng tầm. Chúng tôi xác lập kỷ lục bán hàng, góp phần vào sự thành công của nhiều dự án đẳng cấp và đã nhận về nhiều danh hiệu đại lý xuất sắc.</p>
+                <div class="timeline-wrap">
+                    <article class="award-item top">
+                        <img src="img/TOP-1-du-an-Eco-Village-Saigon-River-The-Legend-of-Bluezone-cua-nha-sang-lap-Ecopark.png" alt="Ecopark">
+                        <h3>Ecopark</h3>
+                        <p>Top 1 dự án Eco Village Saigon River - The Legend of...</p>
+                    </article>
+                    <article class="award-item bottom">
+                        <img src="img/TOP-1-DAI-LY-PHAN-PHOI-XUAT-SAC-DU-AN-ESSENSIA-SKY-cua-tap-doan-Phu-Long.png" alt="Phú Long">
+                        <h3>Phú Long</h3>
+                        <p>Top 1 đại lý phân phối xuất sắc dự án Essensia Sky của tập...</p>
+                    </article>
+                    <article class="award-item top">
+                        <img src="img/TOP-1-DOANH-SO-HOME-RETREAT-cua-nha-sang-lap-Ecopark.png" alt="Ecopark Home Retreat">
+                        <h3>Ecopark</h3>
+                        <p>Top 1 doanh số Home Retreat của nhà sáng lập Ecopark</p>
+                    </article>
+                    <article class="award-item bottom">
+                        <img src="img/Top-2-Dai-Ly-Xuat-Sac-Cho-Du-An-The-Filmore-Da-Nang.png" alt="The Filmore">
+                        <h3>The Filmore</h3>
+                        <p>Top 2 đại lý xuất sắc cho dự án The Filmore Đà Nẵng</p>
+                    </article>
+                    <article class="award-item top">
+                        <img src="img/TOP-5-Dai-ly-xuat-sac-nhat-khu-vuc-mien-Nam-cua-Masterise-Homes.png" alt="Masterise Homes">
+                        <h3>Masterise Homes</h3>
+                        <p>Top 5 đại lý xuất sắc nhất khu vực miền Nam của Masterise...</p>
+                    </article>
+                    <article class="award-item bottom">
+                        <img src="img/Best-Agent-cho-du-an-EcoVillage-Saigon-River-cua-nha-sang-lap-Ecopark.png" alt="Best Agent Ecopark">
+                        <h3>Ecopark</h3>
+                        <p>Best Agent cho dự án EcoVillage Saigon River của nhà sáng...</p>
+                    </article>
+                    <div class="timeline-line">
+                        <span>2025</span>
+                        <span>2025</span>
+                        <span>2025</span>
+                        <span>2025</span>
+                        <span>2025</span>
+                        <span>2024</span>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a class="btn btn-primary-custom btn-small" href="pages/giai-thuong/">Xem thêm</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="news-section section-padding" id="news">
+            <div class="container narrow-container">
+                <h2 class="section-title">Tin tức</h2>
+                <div class="row g-4 news-grid">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card">
+                            <a class="news-image" href="#">
+                                <img src="img/du-an-do-thi.jpg" alt="Siêu đô thị biển Blanca City Vũng Tàu">
+                            </a>
+                            <div class="news-content">
+                                <h3>SIÊU ĐÔ THỊ BIỂN BLANCA CITY VŨNG TÀU [TẤT TẦN TẬT THÔNG TIN]</h3>
+                                <p>Blanca City Vũng Tàu là siêu đô thị biển mới nhất do Sun Group kiến tạo...</p>
+                                <a class="text-link" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card">
+                            <a class="news-image" href="#">
+                                <img src="img/hero.webp" alt="Căn hộ Gladia Khang Điền">
+                            </a>
+                            <div class="news-content">
+                                <h3>Căn hộ Gladia Khang Điền: 8 loại căn, diện tích, giá dự kiến &amp; cách chọn tháp (2026)</h3>
+                                <p>Căn hộ Gladia Khang Điền (phân khu cao tầng Gladia Heights) có 8 dòng...</p>
+                                <a class="text-link" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="news-card">
+                            <a class="news-image" href="#">
+                                <img src="img/biet-thu-Melia-Ho-Tram-2.jpeg" alt="Thuế bất động sản">
+                            </a>
+                            <div class="news-content">
+                                <h3>Thuế bất động sản gồm những gì? Cập nhật quy định và đề xuất mới nhất năm 2026</h3>
+                                <p>Thuế bất động sản luôn là chủ đề được nhà đầu tư và người sở hữu...</p>
+                                <a class="text-link" href="#">Xem thêm <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="text-center mt-5">
+                    <a class="btn btn-primary-custom btn-small" href="pages/tin-tuc/">Xem thêm</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="career-section" id="career">
+            <div class="career-banner">
+                <div class="container text-center">
+                    <h2>Cơ hội nghề nghiệp</h2>
+                    <a class="btn btn-primary-custom btn-small" href="#contact">Ứng tuyển ngay</a>
+                </div>
+            </div>
+            <div class="container narrow-container presence-block">
+                <h2 class="section-title text-center">Smartland đã có mặt tại</h2>
+                <div class="row g-4 office-list">
+                    <div class="col-lg-6">
+                        <p><i class="fa-solid fa-location-dot"></i><strong>Head Office:</strong> Tòa nhà Đại Dũng, 92 Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+                        <p><i class="fa-solid fa-location-dot"></i><strong>Hà Nội:</strong> Tòa Nhà Sao Mai Lầu 4, Số 19 Lê Văn Lương, Quận Thanh Xuân, Hà Nội</p>
+                        <p><i class="fa-solid fa-location-dot"></i><strong>Hà Nội:</strong> Tòa nhà Sao Mai Lầu 5, Số 19 Lê Văn Lương, Quận Thanh Xuân, Hà Hà Nội</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p><i class="fa-solid fa-location-dot"></i><strong>Đà Nẵng 1:</strong> Lầu 6, 218 Trần Hưng Đạo, Q.Sơn Trà, TP Đà Nẵng</p>
+                        <p><i class="fa-solid fa-location-dot"></i><strong>Đà Nẵng 2:</strong> Lô 10, Khu B2 - 3, Đường Nguyễn Phước Lan, Phường Hòa Xuân, Đà Nẵng</p>
+                        <p><i class="fa-solid fa-location-dot"></i><strong>Vinh - Nghệ An:</strong> 130 Nguyễn Sỹ Sách, Phường Hưng Phúc, TP Vinh Nghệ An</p>
+                        <p><i class="fa-solid fa-location-dot"></i><strong>Long An:</strong> K15 Eco Bazzar, Đường Nguyễn Hữu Trí, Xã Bến Lức, Tỉnh Tây Ninh (Long An cũ)</p>
+                        <p><i class="fa-solid fa-location-dot"></i><strong>Quận 12:</strong> Lô 3 tầng 3, Tòa nhà Genpacific, Đường số 16, Công viên Phần mềm Quang Trung, P. Trung Mỹ Tây, TP. HCM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Shared Footer -->
-    <div data-component="footer" data-src="shared/footer.html"></div>
+    <footer class="site-footer" id="contact" data-block="footer">
+        <div class="container narrow-container">
+            <div class="row gy-5">
+                <div class="col-lg-7">
+                    <div class="footer-contact">
+                        <h3>Địa chỉ trụ sở chính:</h3>
+                        <p>L17-11 Tầng 17, Tòa nhà Vincom Center, Số 72 Lê Thánh Tôn, Phường Sài Gòn, Thành phố Hồ Chí Minh</p>
+
+                        <h3>Địa chỉ văn phòng giao dịch:</h3>
+                        <p>Tầng 2, Tòa Nhà Đại Dũng, 92 Đường Nguyễn Hữu Cảnh, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh</p>
+
+                        <p class="contact-line"><strong>Hotline:</strong> 0916 25 78 25 - <strong>Email:</strong> lienhe@smartland.vn</p>
+
+                        <div class="social-links" aria-label="Mạng xã hội">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" aria-label="Messenger"><i class="fa-brands fa-facebook-messenger"></i></a>
+                            <a href="#" aria-label="Zalo">Zalo</a>
+                        </div>
+
+                        <ul class="footer-notes">
+                            <li>A MEMBER OF SMARTLAND GROUP</li>
+                            <li>Website thuộc sở hữu bởi: CÔNG TY TNHH BẤT ĐỘNG SẢN SMARTLAND</li>
+                            <li>Bản quyền ©2025 thuộc về Công ty TNHH Bất Động Sản Smartland</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <form id="footer-subscribe-form" class="subscribe-form" action="#" method="post">
+                        <h3>Đăng ký nhận thêm thông tin</h3>
+                        <label class="visually-hidden" for="footerFullName">Họ tên</label>
+                        <input id="footerFullName" type="text" name="fullName" placeholder="Nhập họ tên của bạn">
+                        <label class="visually-hidden" for="footerPhoneNumber">Số điện thoại</label>
+                        <input id="footerPhoneNumber" type="tel" name="phoneNumber" placeholder="Nhập số điện thoại của bạn">
+                        <button class="btn btn-primary-custom btn-small" type="submit">Đăng ký</button>
+                    </form>
+                    <div class="footer-policy">
+                        <a href="#">CHÍNH SÁCH BẢO MẬT</a>
+                        <span class="certification">ĐÃ THÔNG BÁO<br>BỘ CÔNG THƯƠNG</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Back To Top -->
-    <div data-component="backtotop" data-src="shared/backtotop.html"></div>
+    <button class="back-to-top" type="button" aria-label="Về đầu trang">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>window.ROOT_PATH = './';</script>

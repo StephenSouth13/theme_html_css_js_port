@@ -1,11 +1,24 @@
-<header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Smartland Header - Công ty TNHH Bất động sản Smartland">
+    <title>Smartland Header</title>
+    <link rel="icon" type="image/png" href="{{ROOT}}img/logo2024.png">
+    <link rel="shortcut icon" type="image/png" href="{{ROOT}}img/logo2024.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Smartland">
+    <meta property="og:title" content="Smartland Header">
+    <meta property="og:description" content="Chuyên phân phối các dự án bất động sản cao cấp.">
+    <meta property="og:image" content="{{ROOT}}img/hero.webp">
+    <meta property="og:url" content="index.html">
+</head>
+<header class="site-header" data-block="header">
+    <nav class="navbar navbar-expand-lg navbar-light" data-block="nav">
         <div class="container">
             <a class="navbar-brand" href="{{ROOT}}index.html" aria-label="Smartland">
                 <img src="{{ROOT}}img/logo2024.png" alt="Smartland logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Mở menu">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler hamburger mobile-menu-toggle btn-hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation" data-hamburger="true">
+                <span class="navbar-toggler-icon hamburger-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainMenu">
                 <ul class="navbar-nav ms-auto align-items-lg-center">
